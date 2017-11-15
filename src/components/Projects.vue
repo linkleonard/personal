@@ -1,6 +1,6 @@
 <template>
   <div class="projects">
-    <custom-header>Projects</custom-header>
+    <heading>Projects</heading>
     <ul>
       <li><a href="http://www.leonaard.me/skate-smooth/" target="_blank">Skate Smooth</a></li>
     </ul>
@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Header from '@/components/Header';
+import Heading from '@/components/Heading';
 
 export default {
   name: 'HelloWorld',
@@ -18,7 +18,7 @@ export default {
     };
   },
   components: {
-    CustomHeader: Header,
+    Heading,
   },
 };
 </script>

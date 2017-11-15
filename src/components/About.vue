@@ -1,12 +1,12 @@
 <template>
   <div>
-    <custom-header>{{ username }}</custom-header>
+    <heading>{{ username }}</heading>
     <div>{{ roles }}</div>
   </div>
 </template>
 
 <script>
-import Header from '@/components/Header';
+import Heading from '@/components/Heading';
 
 export default {
   name: 'About',
@@ -17,7 +17,7 @@ export default {
     };
   },
   components: {
-    CustomHeader: Header,
+    Heading,
   },
 };
 </script>

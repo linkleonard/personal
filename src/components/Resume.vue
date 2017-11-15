@@ -1,17 +1,17 @@
 <template>
   <div class="hello">
-    <custom-header>Resume</custom-header>
+    <heading>Resume</heading>
     <p>Coming soon!</p>
   </div>
 </template>
 
 <script>
-import Header from '@/components/Header';
+import Heading from '@/components/Heading';
 
 export default {
   name: 'Resume',
   components: {
-    CustomHeader: Header,
+    Heading,
   },
 };
 </script>
