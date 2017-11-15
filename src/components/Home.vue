@@ -1,16 +1,22 @@
 <template>
   <div id="app">
+    <about />
     <projects />
+    <resume />
   </div>
 </template>
 
 <script>
 import Projects from '@/components/Projects';
+import About from '@/components/About';
+import Resume from '@/components/Resume';
 
 export default {
   name: 'app',
   components: {
     Projects,
+    About,
+    Resume,
   },
 };
 </script>
