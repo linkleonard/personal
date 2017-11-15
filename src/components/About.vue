@@ -1,11 +1,13 @@
 <template>
   <div>
-    <h2>{{ username }}</h2>
+    <custom-header>{{ username }}</custom-header>
     <div>{{ roles }}</div>
   </div>
 </template>
 
 <script>
+import Header from '@/components/Header';
+
 export default {
   name: 'About',
   data() {
@@ -14,26 +16,8 @@ export default {
       roles: ['Developer', 'Musician', 'Gamer'].join(', '),
     };
   },
+  components: {
+    CustomHeader: Header,
+  },
 };
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
-</style>

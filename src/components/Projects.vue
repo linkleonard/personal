@@ -1,6 +1,6 @@
 <template>
   <div class="projects">
-    <h2>Projects</h2>
+    <custom-header>Projects</custom-header>
     <ul>
       <li><a href="http://www.leonaard.me/skate-smooth/" target="_blank">Skate Smooth</a></li>
     </ul>
@@ -8,6 +8,8 @@
 </template>
 
 <script>
+import Header from '@/components/Header';
+
 export default {
   name: 'HelloWorld',
   data() {
@@ -15,15 +17,14 @@ export default {
       msg: 'Bleep bloop',
     };
   },
+  components: {
+    CustomHeader: Header,
+  },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-
 ul {
   list-style-type: none;
   padding: 0;
