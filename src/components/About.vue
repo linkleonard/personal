@@ -1,6 +1,6 @@
 <template>
   <div>
-    <heading>{{ username }}</heading>
+    <heading>About</heading>
     <div>{{ roles }}</div>
   </div>
 </template>
@@ -12,7 +12,6 @@ export default {
   name: 'About',
   data() {
     return {
-      username: 'Leonard Law',
       roles: ['Developer', 'Musician', 'Gamer'].join(', '),
     };
   },

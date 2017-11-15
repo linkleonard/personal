@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <site-header />
     <about />
     <projects />
     <resume />
@@ -8,6 +9,7 @@
 
 <script>
 import Projects from '@/components/Projects';
+import SiteHeader from '@/components/SiteHeader';
 import About from '@/components/About';
 import Resume from '@/components/Resume';
 
@@ -17,6 +19,7 @@ export default {
     Projects,
     About,
     Resume,
+    SiteHeader,
   },
 };
 </script>
