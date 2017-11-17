@@ -23,7 +23,7 @@ export default {
       projects: [
         {
           name: 'Skate Smooth',
-          uri: 'http://www.leonaard.me/skate-smooth/',
+          uri: 'https://www.leonaard.me/skate-smooth/',
           background: longboardBackground,
           backgroundBlur: longboardBackgroundBlurred,
         },
