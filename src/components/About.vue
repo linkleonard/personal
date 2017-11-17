@@ -2,6 +2,9 @@
   <section>
     <h2>About</h2>
     <div>{{ roles }}</div>
+    <p>As a full stack developer, I believe that high quality code is correct, maintainable, and performant. I am well versed in the entire software development pipeline, with experience in rapid prototyping, agile development, and setting up automated production deployments.</p>
+    <p>I am also a classically trained pianist, and self-taught fledging guitarist.</p>
+    <p>With my background as a PC gamer, I also have an interest in the game development and related fields. I occasionally immerse myself with Unity3D and experiment with small toy projects.</p>
     <ul>
       <li v-for="item in social">
         <a class="social" :href="item.uri">
@@ -81,6 +84,12 @@ a.button {
   background: #42b983;
   color: #ffffff;
   text-decoration: none;
+}
+
+p {
+  max-width: 600px;
+  margin: 20px auto;
+  line-height: 20px;
 }
 
 </style>
