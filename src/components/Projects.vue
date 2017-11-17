@@ -45,49 +45,58 @@ ul {
     flex: 0 0 200px;
     height: 150px;
     display: flex;
-
-    a {
-      flex: 1 1 auto;
-      position: relative;
-
-      background-size: cover;
-      border-radius: 10px;
-      overflow: hidden;
-    }
-
-    span {
-      position: absolute;
-
-      left: 0;
-      right: 0;
-      vertical-align: middle;
-
-      top: 50%;
-      transform: translateY(-50%);
-      margin: auto;
-
-      z-index: 1;
-
-      color: #ffffff;
-      text-shadow: 0 0 10px #000000, 0 0 10px #000000, 0 0 10px #000000;
-    }
-
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      opacity: 0;
-
-      transition: all 200ms linear;
-    }
-
-    a:hover .overlay {
-      opacity: 1;
-    }
   }
 }
+
+span {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  vertical-align: middle;
+
+  top: 50%;
+  transform: translateY(-50%);
+  margin: auto;
+
+  z-index: 1;
+
+  color: #ffffff;
+  text-shadow: 0 0 10px #000000, 0 0 10px #000000, 0 0 10px #000000;
+}
+
+a {
+  flex: 1 1 auto;
+  position: relative;
+
+  border-radius: 10px;
+  overflow: hidden;
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+}
+
+a, .overlay {
+  background-size: 200px 150px;
+  background-position: center;
+  transition: all 200ms linear;
+}
+
+a:hover, .overlay {
+  background-size: 220px 165px;
+}
+
+a:hover {
+  .overlay {
+    background-size: 220px 165px;
+    opacity: 1;
+  }
+}
+
 </style>
