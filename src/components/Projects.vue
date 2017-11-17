@@ -7,6 +7,9 @@
           <span>{{ item.name }}</span>
           <div class="overlay" :style="{backgroundImage: `url(${item.backgroundBlur})`}" />
         </a>
+        <div class="description">
+          <p v-for="paragraph in item.description">{{ paragraph }}</p>
+        </div>
       </li>
     </ul>
   </section>
@@ -26,6 +29,10 @@ export default {
           uri: 'https://www.leonaard.me/skate-smooth/',
           background: longboardBackground,
           backgroundBlur: longboardBackgroundBlurred,
+          description: [
+            'A visual road quality index targeted towards skateboarders.',
+            'Features an integration with the Google Maps API, with data persistence powered by HTML5 Local Storage.',
+          ],
         },
       ],
     };
@@ -39,35 +46,16 @@ export default {
 <style lang="scss" scoped>
 
 ul {
-  display: flex;
-  justify-content: center;
-
   li {
-    flex: 0 0 200px;
-    height: 150px;
     display: flex;
   }
 }
 
-span {
-  position: absolute;
-
-  left: 0;
-  right: 0;
-  vertical-align: middle;
-
-  top: 50%;
-  transform: translateY(-50%);
-  margin: auto;
-
-  z-index: 1;
-
-  color: #ffffff;
-  text-shadow: 0 0 10px #000000, 0 0 10px #000000, 0 0 10px #000000;
-}
-
 a {
-  flex: 1 1 auto;
+  display: inline-block;
+  width: 200px;
+  height: 150px;
+  flex: 0 0 auto;
   position: relative;
 
   border-radius: 10px;
@@ -80,6 +68,23 @@ a {
     width: 100%;
     height: 100%;
     opacity: 0;
+  }
+
+  span {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    vertical-align: middle;
+
+    top: 50%;
+    transform: translateY(-50%);
+    margin: auto;
+
+    z-index: 1;
+
+    color: #ffffff;
+    text-shadow: 0 0 10px #000000, 0 0 10px #000000, 0 0 10px #000000;
   }
 }
 
@@ -97,6 +102,22 @@ a:hover {
   .overlay {
     background-size: 220px 165px;
     opacity: 1;
+  }
+}
+
+.description {
+  flex: 1 1 auto;
+
+  p {
+    margin: 10px 30px;
+    text-align: left;
+    line-height: 20px;
+
+    &:first-child {
+      font-size: 20px;
+      line-height: 25px;
+      font-weight: 500;
+    }
   }
 }
 
