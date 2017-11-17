@@ -40,6 +40,7 @@ export default {
 
 ul {
   display: flex;
+  justify-content: center;
 
   li {
     flex: 0 0 200px;
