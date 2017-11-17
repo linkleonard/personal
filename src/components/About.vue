@@ -1,6 +1,6 @@
 <template>
   <section>
-    <heading>About</heading>
+    <h2>About</h2>
     <div>{{ roles }}</div>
     <ul>
       <li v-for="item in social">
@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import Heading from '@/components/Heading';
+
 import Icon from 'vue-awesome/components/Icon';
 
 import 'vue-awesome/icons/github-alt';
@@ -34,7 +34,7 @@ export default {
     };
   },
   components: {
-    Heading,
+
     Icon,
   },
 };

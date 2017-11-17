@@ -32,6 +32,13 @@ li {
   margin: 0 10px;
 }
 
+h2 {
+  margin: 10px 0 15px 0;
+
+  font-size: 25px;
+  font-weight: normal;
+}
+
 a {
   color: #42b983;
 }
@@ -41,6 +48,10 @@ section {
 
   &:nth-child(2n + 1) {
     background: #f8f8f8;
+  }
+
+  h2 {
+    margin-bottom: 40px;
   }
 }
 </style>

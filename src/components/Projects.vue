@@ -1,6 +1,6 @@
 <template>
   <section class="projects">
-    <heading>Projects</heading>
+    <h2>Projects</h2>
     <ul>
       <li><a href="http://www.leonaard.me/skate-smooth/" target="_blank">Skate Smooth</a></li>
     </ul>
@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Heading from '@/components/Heading';
+
 
 export default {
   name: 'HelloWorld',
@@ -18,7 +18,7 @@ export default {
     };
   },
   components: {
-    Heading,
+
   },
 };
 </script>

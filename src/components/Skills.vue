@@ -1,6 +1,6 @@
 <template>
   <section class="projects">
-    <heading>Skills</heading>
+    <h2>Skills</h2>
 
     <ul>
       <li v-for="item in itemsToDisplay">
@@ -12,7 +12,6 @@
 </template>
 
 <script>
-import Heading from '@/components/Heading';
 import Bar from '@/components/Bar';
 
 export default {
@@ -36,7 +35,6 @@ export default {
     };
   },
   components: {
-    Heading,
     Bar,
   },
   computed: {

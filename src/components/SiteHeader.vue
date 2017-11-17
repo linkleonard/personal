@@ -1,12 +1,12 @@
 <template>
   <div>
     <img src="../assets/profile.png">
-    <heading class="username">{{ username }}</heading>
+    <h2 class="username">{{ username }}</h2>
   </div>
 </template>
 
 <script>
-import Heading from '@/components/Heading';
+
 
 export default {
   name: 'About',
@@ -16,7 +16,7 @@ export default {
     };
   },
   components: {
-    Heading,
+
   },
 };
 </script>
