@@ -18,6 +18,8 @@
 <script>
 import longboardBackground from '@/assets/longboard.jpg';
 import longboardBackgroundBlurred from '@/assets/longboard-blur.jpg';
+import tapcatBackground from '@/assets/tapcat.jpg';
+import tapcatBackgroundBlurred from '@/assets/tapcat-blur.jpg';
 
 export default {
   name: 'HelloWorld',
@@ -32,6 +34,16 @@ export default {
           description: [
             'A visual road quality index targeted towards skateboarders.',
             'Features an integration with the Google Maps API, with data persistence powered by HTML5 Local Storage.',
+          ],
+        },
+        {
+          name: 'Tapcat',
+          uri: 'https://play.google.com/store/apps/details?id=com.wildcardstudios.tapcat',
+          background: tapcatBackground,
+          backgroundBlur: tapcatBackgroundBlurred,
+          description: [
+            'Simple infinite runner for iOS and Android.',
+            'High score system with social sharing capability via Facebook and high score tracking via Google Play Services.',
           ],
         },
       ],
