@@ -1,10 +1,10 @@
 <template>
-  <div class="projects">
+  <section class="projects">
     <heading>Projects</heading>
     <ul>
       <li><a href="http://www.leonaard.me/skate-smooth/" target="_blank">Skate Smooth</a></li>
     </ul>
-  </div>
+  </section>
 </template>
 
 <script>

@@ -5,12 +5,14 @@
 </template>
 
 <script>
+import 'reset-css/reset.css';
+
 export default {
   name: 'app',
 };
 </script>
 
-<style>
+<style lang="scss">
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -32,5 +34,13 @@ li {
 
 a {
   color: #42b983;
+}
+
+section {
+  padding: 30px;
+
+  &:nth-child(2n + 1) {
+    background: #f8f8f8;
+  }
 }
 </style>

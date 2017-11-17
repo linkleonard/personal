@@ -1,8 +1,8 @@
 <template>
-  <div class="hello">
+  <section>
     <heading>Resume</heading>
     <p>Coming soon!</p>
-  </div>
+  </section>
 </template>
 
 <script>
