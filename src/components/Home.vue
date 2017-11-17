@@ -4,7 +4,6 @@
     <about />
     <skills />
     <projects />
-    <resume />
   </div>
 </template>
 
@@ -12,7 +11,6 @@
 import Projects from '@/components/Projects';
 import SiteHeader from '@/components/SiteHeader';
 import About from '@/components/About';
-import Resume from '@/components/Resume';
 import Skills from '@/components/Skills';
 
 export default {
@@ -20,7 +18,6 @@ export default {
   components: {
     Projects,
     About,
-    Resume,
     Skills,
     SiteHeader,
   },
