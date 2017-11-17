@@ -1,22 +1,20 @@
 <template>
   <div>
-    <img src="../assets/profile.png">
+    <img :src="Profile">
     <h2 class="username">{{ username }}</h2>
   </div>
 </template>
 
 <script>
-
+import Profile from '@/assets/profile.png';
 
 export default {
   name: 'About',
   data() {
     return {
       username: 'Leonard Law',
+      Profile,
     };
-  },
-  components: {
-
   },
 };
 </script>
