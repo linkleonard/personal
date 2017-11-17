@@ -5,14 +5,14 @@
 </template>
 
 <script>
-import 'reset-css/reset.css';
-
 export default {
   name: 'app',
 };
 </script>
 
 <style lang="scss">
+@import '~reset-css/_reset.scss';
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
