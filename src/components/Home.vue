@@ -2,6 +2,7 @@
   <div id="app">
     <site-header />
     <about />
+    <skills />
     <projects />
     <resume />
   </div>
@@ -12,6 +13,7 @@ import Projects from '@/components/Projects';
 import SiteHeader from '@/components/SiteHeader';
 import About from '@/components/About';
 import Resume from '@/components/Resume';
+import Skills from '@/components/Skills';
 
 export default {
   name: 'app',
@@ -19,6 +21,7 @@ export default {
     Projects,
     About,
     Resume,
+    Skills,
     SiteHeader,
   },
 };
