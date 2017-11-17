@@ -60,6 +60,9 @@ export default {
 ul {
   li {
     display: flex;
+
+    justify-content: center;
+    margin: 20px;
   }
 }
 
@@ -72,6 +75,8 @@ a {
 
   border-radius: 10px;
   overflow: hidden;
+  margin-left: 50px;
+
   .overlay {
     position: absolute;
     top: 0;
@@ -119,6 +124,7 @@ a:hover {
 
 .description {
   flex: 1 1 auto;
+  max-width: 600px;
 
   p {
     margin: 10px 30px;
