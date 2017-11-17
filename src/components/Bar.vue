@@ -31,7 +31,8 @@ span.wrapper {
   height: $height;
 
   border-radius: $height;
-  background: #aaaaaa;
+  background: #ffffff;
+  border: 2px solid #aaaaaa;
 
   span {
     position: absolute;
@@ -39,7 +40,7 @@ span.wrapper {
     top: $space;
     max-width: calc(100% - (2 * #{$space}));
     height: $track-height;
-    background: #ffffff;
+    background: #b3f199;
     border-radius: $track-height;
   }
 }
