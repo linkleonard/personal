@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <nav>
     <img :src="Profile">
-    <h2 class="username">{{ username }}</h2>
-  </div>
+    <h1 class="username">{{ username }}</h1>
+  </nav>
 </template>
 
 <script>
@@ -20,13 +20,21 @@ export default {
 </script>
 
 <style scoped>
-div {
+nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px;
+
+  background-color: #e8ffe8;
 }
 
 .username {
   margin: 0 10px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 500;
 }
 </style>
