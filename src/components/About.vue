@@ -92,4 +92,15 @@ p {
   line-height: 20px;
 }
 
+section {
+  color: #ffffff;
+  text-shadow: 0 0 2px #000000;
+  background:
+    // Apply gradient to improve text visibility.
+    // Have this be done on the client, as the height of this section will
+    // change between devices, thus the gradient may not be properly placed.
+    radial-gradient(ellipse 30% 70%, rgba(0, 0, 0, 0.25) 50%, transparent 100%),
+    url('../assets/about-background-baked.jpg') center/cover;
+}
+
 </style>
