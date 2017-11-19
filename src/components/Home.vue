@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div>
     <site-header />
     <about />
     <skills />
@@ -16,7 +16,7 @@ import About from '@/components/About';
 import Skills from '@/components/Skills';
 
 export default {
-  name: 'app',
+  name: 'Home',
   components: {
     Projects,
     About,
@@ -26,14 +26,3 @@ export default {
   },
 };
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
