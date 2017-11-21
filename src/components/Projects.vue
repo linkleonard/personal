@@ -20,6 +20,8 @@ import longboardBackground from '@/assets/longboard.jpg';
 import longboardBackgroundBlurred from '@/assets/longboard-blur.jpg';
 import tapcatBackground from '@/assets/tapcat.jpg';
 import tapcatBackgroundBlurred from '@/assets/tapcat-blur.jpg';
+import alienBackground from '@/assets/area-52.jpg';
+import alienBackgroundBlurred from '@/assets/area-52-blur.jpg';
 
 export default {
   name: 'HelloWorld',
@@ -44,6 +46,16 @@ export default {
           description: [
             'Simple infinite runner for iOS and Android.',
             'High score system with social sharing capability via Facebook and high score tracking via Google Play Services.',
+          ],
+        },
+        {
+          name: 'Area 52',
+          uri: 'https://play.google.com/store/apps/details?id=com.wildcardstudios.tap',
+          background: alienBackground,
+          backgroundBlur: alienBackgroundBlurred,
+          description: [
+            'Arcade fidget-clicker for Android.',
+            'Rapid-prototyped arcade game built in Unity3D, heavily utilizing its animations engine, event system.',
           ],
         },
       ],
