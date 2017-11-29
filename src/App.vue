@@ -21,16 +21,6 @@ export default {
   color: #2c3e50;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
 h2 {
   margin: 10px 0 15px 0;
 
