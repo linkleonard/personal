@@ -3,8 +3,8 @@
     <h2>Skills</h2>
 
     <div class="filters">
-      <span>Filters</span>
-      <div>
+      <div class="label">Filters</div>
+      <div class="controls">
         <button
           v-for="tag in allTags"
           :class="classNames({
@@ -149,12 +149,12 @@ ul {
 .filters {
   margin-bottom: 30px;
 
-  span {
-    margin-right: 10px;
+  .label {
+    margin: 10px;
     font-size: 18px;
   }
 
-  div {
+  .controls {
     display: inline;
   }
 }
@@ -168,24 +168,12 @@ button {
   outline: none;
   color: $button-color;
   text-transform: capitalize;
+  border-radius: $border-radius;
+  margin: 5px;
 
   &.checked, &:hover {
     color: white;
     background: $button-color;
-  }
-
-  &:first-child {
-    border-top-left-radius: $border-radius;
-    border-bottom-left-radius: $border-radius;
-  }
-
-  + button {
-    border-left: none;
-  }
-
-  &:last-child {
-    border-top-right-radius: $border-radius;
-    border-bottom-right-radius: $border-radius;
   }
 }
 
