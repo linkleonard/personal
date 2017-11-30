@@ -72,9 +72,11 @@ export default {
 ul {
   li {
     display: flex;
+    flex-flow: row wrap;
+    align-items: center;
 
     justify-content: center;
-    margin: 20px;
+    margin: 30px 20px;
   }
 }
 
@@ -82,12 +84,11 @@ a {
   display: inline-block;
   width: 200px;
   height: 150px;
-  flex: 0 0 auto;
+  flex: 0 1 200px;
   position: relative;
 
   border-radius: 10px;
   overflow: hidden;
-  margin-left: 50px;
 
   .overlay {
     position: absolute;
@@ -135,7 +136,7 @@ a:hover {
 }
 
 .description {
-  flex: 1 1 auto;
+  flex: 1 1 200px;
   max-width: 600px;
 
   p {
