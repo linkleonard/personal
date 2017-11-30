@@ -190,10 +190,23 @@ button {
 }
 
 li {
-  flex: 0 0 25%;
+  flex: 0 0 100%;
+
+  @media (min-width: 768px) {
+    flex: 0 0 50%;
+  }
+
+  @media (min-width: 992px) {
+    flex: 0 0 33%;
+  }
+
+  @media(min-width:1200px) {
+    flex: 0 0 25%;
+  }
+
   display: flex;
+  flex-flow: row wrap;
   justify-content: center;
-  min-width: 400px;
   opacity: 0.2;
 
   transition: opacity 200ms linear;
@@ -205,7 +218,11 @@ li {
   // We need a wrapper as mixing percentage-based widths and margins/paddings
   // will cause overflows
   > .wrapper {
-    flex: 0 0 50%;
+    flex: 0 0 100%;
+
+    @media (min-width: 768px) {
+      flex: 0 0 50%;
+    }
 
     > div {
       margin: 10px;
