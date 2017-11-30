@@ -138,6 +138,7 @@ export default {
 <style lang="scss" scoped>
 
 $button-color: #42b983;
+$button-checked-color: #13774a;
 $border-radius: 5px;
 
 ul {
@@ -171,9 +172,15 @@ button {
   border-radius: $border-radius;
   margin: 5px;
 
-  &.checked, &:hover {
+  &:hover {
     color: white;
     background: $button-color;
+  }
+
+  &.checked {
+    color: white;
+    background: $button-checked-color;
+    border-color: $button-checked-color;
   }
 }
 
