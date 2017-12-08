@@ -12,13 +12,13 @@ export default {
 
 <style lang="scss">
 @import '~reset-css/_reset.scss';
+@import 'theme.scss';
 
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
 }
 
 h2 {
@@ -29,14 +29,14 @@ h2 {
 }
 
 a {
-  color: #42b983;
+  color: $primary-link-color;
 }
 
 section {
   padding: 30px;
 
   &:nth-child(2n + 1) {
-    background: #f8f8f8;
+    background: $background-primary;
   }
 
   h2 {

@@ -44,6 +44,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../theme.scss';
 
 ul {
   margin: 40px;
@@ -62,7 +63,9 @@ li {
 a.social {
   display: inline-block;
   padding: 10px;
-  border: 1px solid #42b983;
+  color: $button-default-color;
+  background: $button-default-background;
+  border: 1px solid $button-default-border;
   border-radius: 5px;
   text-decoration: none;
 
@@ -80,9 +83,14 @@ a.social {
   }
 
   &:hover {
-    background: #42b983;
-    color: #ffffff;
+    background: $button-default-focus-background;
+    color: $button-default-focus-color;
+    border-color: $button-default-focus-border;
   }
+}
+
+h2, p {
+  text-shadow: 0 0 2px #000000;
 }
 
 a.button {
@@ -90,10 +98,19 @@ a.button {
   padding: 10px 20px;
   margin: 20px 0;
   border-radius: 5px;
+  border: 1px solid $button-primary-border;
 
-  background: #42b983;
-  color: #ffffff;
+  background: $button-primary-background;
+  color: $button-primary-color;
   text-decoration: none;
+
+  transition: all 100ms linear;
+
+  &:hover {
+    color: $button-primary-focus-color;
+    background: $button-primary-focus-background;
+    border-color: $button-primary-focus-border;
+  }
 }
 
 p {
@@ -103,8 +120,7 @@ p {
 }
 
 section {
-  color: #ffffff;
-  text-shadow: 0 0 2px #000000;
+  color: $main-body-text-color;
   background:
     // Apply gradient to improve text visibility.
     // Have this be done on the client, as the height of this section will
