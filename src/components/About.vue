@@ -48,9 +48,6 @@ export default {
 
 ul {
   margin: 40px;
-}
-
-ul {
   list-style-type: none;
   padding: 0;
 }
