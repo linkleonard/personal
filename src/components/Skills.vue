@@ -16,6 +16,7 @@
         >
           {{ tag }}
         </button>
+        <button @click="clearFilters">Clear All</button>
       </div>
     </div>
 
@@ -44,7 +45,7 @@
 <script>
 import Bar from '@/components/Bar';
 import classNames from 'classnames';
-import { pickBy, keys, intersection } from 'lodash';
+import { pickBy, keys, intersection, each } from 'lodash';
 
 const TAG_TOOLS = 'tools';
 const TAG_LANGUAGE = 'language';
@@ -70,6 +71,11 @@ export default {
     },
     toggleExpand() {
       this.expanded = !this.expanded;
+    },
+    clearFilters() {
+      each(keys(this.selectedTags), (key) => {
+        this.selectedTags[key] = false;
+      });
     },
   },
   data() {
