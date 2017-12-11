@@ -19,7 +19,7 @@
       </div>
     </div>
 
-    <ul>
+    <ul :class="classNames({expanded})">
       <li
         v-for="item in itemsToDisplay"
         :class="classNames({
@@ -34,6 +34,10 @@
         </div>
       </li>
     </ul>
+
+    <button class="show-more" @click="toggleExpand">
+      {{ expanded ? 'Show less' : 'Show more' }}
+    </button>
   </section>
 </template>
 
@@ -61,6 +65,9 @@ export default {
         selectedTagsArray.length === 0 ||
         intersection(item.tags, selectedTagsArray).length > 0
       );
+    },
+    toggleExpand() {
+      this.expanded = !this.expanded;
     },
   },
   data() {
@@ -122,6 +129,7 @@ export default {
         { name: 'Unix Tools', value: 0.75, tags: [TAG_TOOLS] },
         { name: 'Websockets', value: 0.5, tags: [TAG_TECHNOLOGY] },
       ],
+      expanded: false,
     };
   },
   components: {
@@ -136,15 +144,45 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../theme.scss";
+
 
 $button-color: #42b983;
 $button-checked-color: #13774a;
 $border-radius: 5px;
 
+section {
+  position: relative;
+}
+
 ul {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
+
+  &:not(.expanded) {
+    max-height: $expand-collapsed-height;
+    overflow-y: hidden;
+
+    &:after {
+      position: absolute;
+      width: 100%;
+      height: $expand-fade-height;
+
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      content: ' ';
+
+      background: linear-gradient(
+        to top,
+        $color-off-white 0%,
+        $color-off-white $expand-fade-cutoff,
+        transparent 100%
+      );
+    }
+  }
 }
 
 .filters {
@@ -158,6 +196,11 @@ ul {
   .controls {
     display: inline;
   }
+}
+
+.show-more {
+  position: relative;
+  z-index: 1;
 }
 
 button {
