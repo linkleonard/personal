@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~reset-css/_reset.scss';
+@import '~reset-css/sass/_reset.scss';
 @import 'theme.scss';
 
 #app {

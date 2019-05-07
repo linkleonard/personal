@@ -22,8 +22,8 @@
 
 import Icon from 'vue-awesome/components/Icon';
 
-import 'vue-awesome/icons/github-alt';
-import 'vue-awesome/icons/linkedin';
+import 'vue-awesome/icons/brands/github-alt';
+import 'vue-awesome/icons/brands/linkedin';
 
 export default {
   name: 'About',

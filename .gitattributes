@@ -1,6 +1,0 @@
-# Default to using lf as EOL.
-* text eol=lf
-
-# Treat PNG files as binaries. Fixes a bug where the profile picture is
-# corrupted by Git
-*.png binary
