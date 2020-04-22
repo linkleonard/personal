@@ -27,15 +27,15 @@ jobs:
     
     - name: Build
       run: yarn build
-    - name: Setup Git
-      run: |
-        git config --global user.email "deploy-gh-pages@example.com"
-        git config --global user.name "Deploy Github Pages Action"
       
     - name: Initialize repository
       run: |
         cd dist
         git init
+        git config user.email "deploy-gh-pages@example.com"
+        git config user.name "Deploy Github Pages Action"
         git add -A
         git commit -m 'deploy'
-        git push -f git@github.com:linkleonard/linkleonard.github.io.git master
+
+    - name: Deploy
+      run: git push -f git@github.com:linkleonard/linkleonard.github.io.git master
