@@ -29,7 +29,9 @@ jobs:
       run: yarn build
 
     - name: Setup credentials
-      run: echo "{{ secrets.DEPLOY_KEY }}" > id_rsa
+      run: |
+        echo "{{ secrets.DEPLOY_KEY }}" > id_rsa
+        chmod 400 id_rsa
 
     - name: Initialize repository
       run: |
