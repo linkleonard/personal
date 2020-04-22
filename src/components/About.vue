@@ -21,7 +21,7 @@
       </li>
     </ul>
 
-    <a class="button" href="https://leonaard.me/static/upload/resume.pdf">View my Resume</a>
+    <a class="button" href="https://static.linkleonard.me/upload/resume.pdf">View my Resume</a>
   </section>
 </template>
 
