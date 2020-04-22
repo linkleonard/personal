@@ -7,6 +7,7 @@
       <div class="controls">
         <button
           v-for="tag in allTags"
+          :key="tag"
           :class="classNames({
             checked: selectedTags[tag],
           })"
@@ -23,6 +24,7 @@
     <ul :class="classNames({expanded})">
       <li
         v-for="item in itemsToDisplay"
+        :key="item.name"
         :class="classNames({
           active: shouldShowItem(item),
         })"
@@ -43,10 +45,10 @@
 </template>
 
 <script>
-import Bar from '@/components/Bar';
+import Bar from '@/components/Bar.vue';
 import classNames from 'classnames';
 import {
-  pickBy, keys, intersection, each,
+  pickBy, keys, intersection, each, sortBy,
 } from 'lodash';
 
 const TAG_TOOLS = 'tools';
@@ -151,7 +153,7 @@ export default {
   },
   computed: {
     itemsToDisplay() {
-      return this.items.sort((left, right) => right.value - left.value);
+      return sortBy(this.items, (i) => i.value);
     },
   },
 };
@@ -159,7 +161,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "../theme.scss";
-
 
 $button-color: #42b983;
 $button-checked-color: #13774a;
@@ -187,7 +188,7 @@ ul {
       left: 0;
       right: 0;
 
-      content: ' ';
+      content: " ";
 
       background: linear-gradient(
         to top,
@@ -252,7 +253,7 @@ li {
     flex: 0 0 33%;
   }
 
-  @media(min-width:1200px) {
+  @media (min-width: 1200px) {
     flex: 0 0 25%;
   }
 
@@ -264,7 +265,7 @@ li {
   transition: opacity 200ms linear;
 
   &.active {
-    opacity: 1.0;
+    opacity: 1;
   }
 
   // We need a wrapper as mixing percentage-based widths and margins/paddings
@@ -285,5 +286,4 @@ li {
     text-align: center;
   }
 }
-
 </style>
