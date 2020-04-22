@@ -9,11 +9,11 @@
 </template>
 
 <script>
-import Projects from '@/components/Projects';
-import SiteHeader from '@/components/SiteHeader';
-import SiteFooter from '@/components/SiteFooter';
-import About from '@/components/About';
-import Skills from '@/components/Skills';
+import Projects from '@/components/Projects.vue';
+import SiteHeader from '@/components/SiteHeader.vue';
+import SiteFooter from '@/components/SiteFooter.vue';
+import About from '@/components/About.vue';
+import Skills from '@/components/Skills.vue';
 
 export default {
   name: 'Home',
