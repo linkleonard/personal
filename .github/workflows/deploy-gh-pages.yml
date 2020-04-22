@@ -30,7 +30,9 @@ jobs:
 
     - name: Setup credentials
       run: |
-        echo "{{ secrets.DEPLOY_KEY }}" > id_rsa
+        cat > id_rsa <<EOF
+        {{ secrets.DEPLOY_KEY }}
+        EOF
         chmod 400 id_rsa
 
     - name: Initialize repository
