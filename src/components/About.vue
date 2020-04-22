@@ -6,7 +6,7 @@
     <p>I am also a classically trained pianist, and self-taught fledging guitarist.</p>
     <p>With my background as a PC gamer, I also have an interest in the game development and related fields. I occasionally immerse myself with Unity3D and experiment with small toy projects.</p>
     <ul>
-      <li v-for="item in social">
+      <li v-for="item in social" :key="item.name">
         <a class="social" :href="item.uri">
           <icon :name="item.iconName" />
           <span>{{ item.name }}</span>
@@ -19,9 +19,7 @@
 </template>
 
 <script>
-
-import Icon from 'vue-awesome/components/Icon';
-
+import Icon from 'vue-awesome/components/Icon.vue';
 import 'vue-awesome/icons/brands/github-alt';
 import 'vue-awesome/icons/brands/linkedin';
 
@@ -31,20 +29,19 @@ export default {
     return {
       roles: ['Developer', 'Musician', 'Gamer'].join(', '),
       social: [
-        { name: 'GitHub', iconName: 'github-alt', uri: 'https://github.com/linkleonard' },
-        { name: 'LinkedIn', iconName: 'linkedin', uri: 'https://www.linkedin.com/in/leonard-law-502a9626/' },
+        { name: 'GitHub', iconName: 'brands/github-alt', uri: 'https://github.com/linkleonard' },
+        { name: 'LinkedIn', iconName: 'brands/linkedin', uri: 'https://www.linkedin.com/in/leonard-law-502a9626/' },
       ],
     };
   },
   components: {
-
     Icon,
   },
 };
 </script>
 
 <style lang="scss" scoped>
-@import '../theme.scss';
+@import "../theme.scss";
 
 ul {
   margin: 40px;
@@ -86,7 +83,8 @@ a.social {
   }
 }
 
-h2, p {
+h2,
+p {
   text-shadow: 0 0 2px #000000;
 }
 
@@ -118,12 +116,14 @@ p {
 
 section {
   color: $main-body-text-color;
-  background:
-    // Apply gradient to improve text visibility.
-    // Have this be done on the client, as the height of this section will
-    // change between devices, thus the gradient may not be properly placed.
-    radial-gradient(ellipse 30% 70%, rgba(0, 0, 0, 0.25) 50%, transparent 100%),
-    url('../assets/about-background.jpg') center/cover;
+  // Apply gradient to improve text visibility.
+  // Have this be done on the client, as the height of this section will
+  // change between devices, thus the gradient may not be properly placed.
+  background: radial-gradient(
+      ellipse 30% 70%,
+      rgba(0, 0, 0, 0.25) 50%,
+      transparent 100%
+    ),
+    url("../assets/about-background.jpg") center/cover;
 }
-
 </style>
