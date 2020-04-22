@@ -27,7 +27,10 @@ jobs:
     
     - name: Build
       run: yarn build
-      
+
+    - name: Setup credentials
+      run: echo "{{ secrets.DEPLOY_KEY }}" > id_rsa
+
     - name: Initialize repository
       run: |
         cd dist
@@ -38,4 +41,4 @@ jobs:
         git commit -m 'deploy'
 
     - name: Deploy
-      run: git push -f git@github.com:linkleonard/linkleonard.github.io.git master
+      run: GIT_SSH_COMMAND="ssh -i ../id_rsa" git push -f git@github.com:linkleonard/linkleonard.github.io.git master
