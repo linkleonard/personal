@@ -45,7 +45,9 @@
 <script>
 import Bar from '@/components/Bar';
 import classNames from 'classnames';
-import { pickBy, keys, intersection, each } from 'lodash';
+import {
+  pickBy, keys, intersection, each,
+} from 'lodash';
 
 const TAG_TOOLS = 'tools';
 const TAG_LANGUAGE = 'language';
@@ -63,10 +65,10 @@ export default {
     shouldShowItem(item) {
       // Convert the selectedTags object into an array, so we can use it to
       // perform set intersection via lodash.intersection().
-      const selectedTagsArray = keys(pickBy(this.selectedTags, checked => checked));
+      const selectedTagsArray = keys(pickBy(this.selectedTags, (checked) => checked));
       return (
-        selectedTagsArray.length === 0 ||
-        intersection(item.tags, selectedTagsArray).length > 0
+        selectedTagsArray.length === 0
+        || intersection(item.tags, selectedTagsArray).length > 0
       );
     },
     toggleExpand() {
