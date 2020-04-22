@@ -2,9 +2,16 @@
   <section>
     <h2>About</h2>
     <div>{{ roles }}</div>
-    <p>As a full stack developer, I believe that high quality code is correct, maintainable, and performant. I am well versed in the entire software development pipeline, with experience in rapid prototyping, agile development, and setting up automated production deployments.</p>
+    <p>
+      I believe that high quality code is correct, maintainable, and performant.
+      I am well versed in the entire software development pipeline, with experience in
+      rapid prototyping, agile development, and setting up automated production deployments.
+    </p>
     <p>I am also a classically trained pianist, and self-taught fledging guitarist.</p>
-    <p>With my background as a PC gamer, I also have an interest in the game development and related fields. I occasionally immerse myself with Unity3D and experiment with small toy projects.</p>
+    <p>
+      I also have an interest in the game development and related fields.
+      I occasionally immerse myself with Unity3D and experiment with small toy projects.
+    </p>
     <ul>
       <li v-for="item in social" :key="item.name">
         <a class="social" :href="item.uri">
@@ -27,7 +34,7 @@ export default {
   name: 'About',
   data() {
     return {
-      roles: ['Developer', 'Musician', 'Gamer'].join(', '),
+      roles: ['Full Stack Engineer', 'Musician', 'Gamer'].join(', '),
       social: [
         { name: 'GitHub', iconName: 'brands/github-alt', uri: 'https://github.com/linkleonard' },
         { name: 'LinkedIn', iconName: 'brands/linkedin', uri: 'https://www.linkedin.com/in/leonard-law-502a9626/' },
