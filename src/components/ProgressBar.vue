@@ -8,7 +8,7 @@
 <script>
 export default {
   functional: true,
-  name: 'Bar',
+  name: 'ProgressBar',
   props: {
     fill: {
       type: Number,

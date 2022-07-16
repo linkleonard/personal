@@ -45,7 +45,7 @@ const projects = [
 ];
 
 export default {
-  name: 'Projects',
+  name: 'ProjectList',
   data() {
     return {
       projects,

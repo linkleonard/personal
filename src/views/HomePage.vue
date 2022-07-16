@@ -9,14 +9,14 @@
 </template>
 
 <script>
-import Projects from '@/components/Projects.vue';
+import Projects from '@/components/ProjectList.vue';
 import SiteHeader from '@/components/SiteHeader.vue';
 import SiteFooter from '@/components/SiteFooter.vue';
-import About from '@/components/About.vue';
-import Skills from '@/components/Skills.vue';
+import About from '@/components/AboutSection.vue';
+import Skills from '@/components/SkillList.vue';
 
 export default {
-  name: 'Home',
+  name: 'HomePage',
   components: {
     Projects,
     About,

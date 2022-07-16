@@ -9,7 +9,7 @@
 import Profile from '@/assets/profile.png';
 
 export default {
-  name: 'About',
+  name: 'SiteHeader',
   data() {
     return {
       username: 'Leonard Law',

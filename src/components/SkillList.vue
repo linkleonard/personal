@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import Bar from '@/components/Bar.vue';
+import Bar from '@/components/ProgressBar.vue';
 import classNames from 'classnames';
 import {
   pickBy, keys, intersection, each, sortBy,
@@ -61,7 +61,7 @@ const TAG_BACKEND = 'backend';
 const TAG_FRONTEND = 'frontend';
 
 export default {
-  name: 'Skills',
+  name: 'SkillList',
   methods: {
     classNames,
     shouldShowItem(item) {

@@ -29,7 +29,7 @@ import 'vue-awesome/icons/brands/github-alt';
 import 'vue-awesome/icons/brands/linkedin';
 
 export default {
-  name: 'About',
+  name: 'AboutSection',
   data() {
     return {
       roles: ['Full Stack Engineer', 'Musician', 'Gamer'].join(', '),
