@@ -47,9 +47,11 @@
 <script>
 import Bar from '@/components/ProgressBar.vue';
 import classNames from 'classnames';
-import {
-  pickBy, keys, intersection, each, sortBy,
-} from 'lodash';
+import pickBy from 'lodash-es/pickBy';
+import keys from 'lodash-es/keys';
+import intersection from 'lodash-es/intersection';
+import each from 'lodash-es/each';
+import sortBy from 'lodash-es/sortBy';
 
 const TAG_TOOLS = 'tools';
 const TAG_LANGUAGE = 'language';
