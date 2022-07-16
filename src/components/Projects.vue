@@ -16,24 +16,12 @@
 </template>
 
 <script>
-import longboardBackground from '@/assets/longboard.jpg';
-import longboardBackgroundBlurred from '@/assets/longboard-blur.jpg';
 import tapcatBackground from '@/assets/tapcat.jpg';
 import tapcatBackgroundBlurred from '@/assets/tapcat-blur.jpg';
 import alienBackground from '@/assets/area-52.jpg';
 import alienBackgroundBlurred from '@/assets/area-52-blur.jpg';
 
 const projects = [
-  {
-    name: 'Skate Smooth',
-    uri: 'https://www.leonaard.me/skate-smooth/',
-    background: longboardBackground,
-    backgroundBlur: longboardBackgroundBlurred,
-    description: [
-      'A visual road quality index targeted towards skateboarders.',
-      'Features an integration with the Google Maps API, with data persistence powered by HTML5 Local Storage.',
-    ],
-  },
   {
     name: 'Tapcat',
     uri: 'https://play.google.com/store/apps/details?id=com.wildcardstudios.tapcat',
@@ -57,7 +45,7 @@ const projects = [
 ];
 
 export default {
-  name: 'HelloWorld',
+  name: 'Projects',
   data() {
     return {
       projects,
