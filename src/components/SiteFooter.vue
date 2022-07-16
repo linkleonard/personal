@@ -6,7 +6,6 @@
 
 <script>
 
-
 export default {
   name: 'SiteFooter',
   data() {
@@ -21,5 +20,4 @@ footer {
   padding: 50px;
   background: #e8ffe8;
 }
-
 </style>
