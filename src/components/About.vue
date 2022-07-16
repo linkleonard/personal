@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import Icon from 'vue-awesome/components/Icon.vue';
+import Icon from 'vue-awesome/components/Icon';
 import 'vue-awesome/icons/brands/github-alt';
 import 'vue-awesome/icons/brands/linkedin';
 
@@ -79,6 +79,10 @@ a.social {
     &:first-child {
       margin-right: 5px;
     }
+  }
+
+  svg {
+    fill: $button-default-color;
   }
 
   &:hover {
