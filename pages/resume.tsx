@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Footer from "../components/footer";
 import NavBar from "../components/navbar";
+import ProficiencyList from "../components/proficiencylist";
 import WorkHistory from "../components/workhistory";
 import styles from "../styles/Resume.module.css";
 
@@ -15,7 +16,14 @@ const Resume = () => (
     <NavBar />
     <main className={styles.main}>
       <h1 className={styles.title}>Resume</h1>
-      <WorkHistory />
+      <section>
+        <h2>Professional Experience</h2>
+        <WorkHistory />
+      </section>
+      <section>
+        <h2>Proficiencies</h2>
+        <ProficiencyList />
+      </section>
     </main>
     <Footer />
   </div>
