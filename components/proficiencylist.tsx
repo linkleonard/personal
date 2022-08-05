@@ -88,9 +88,24 @@ const ProficiencyList = () => {
         ))}
       </form>
 
-      {filtered.map((s) => (
-        <li key={s.name}>{s.name}</li>
-      ))}
+      {[
+        Skill.Language,
+        Skill.Framework,
+        Skill.Database,
+        Skill.Concept,
+        Skill.Technology,
+      ].map((skill) => {
+        return (
+          <>
+            <span>{skill}</span>
+            {filtered
+              .filter((s) => s.category.includes(skill))
+              .map((s) => (
+                <li key={s.name}>{s.name}</li>
+              ))}
+          </>
+        );
+      })}
     </>
   );
 };
