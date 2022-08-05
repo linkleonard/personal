@@ -21,27 +21,3 @@
     border-radius: 0.5rem;
     padding: 0.1rem 0.2rem;
 }
-
-.filter {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.filter > div {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.filterLabel {
-    display: inline-block;
-    border: 1px solid #ffffff;
-    border-radius: 0.5rem;
-    padding: 0.1rem 0.4rem 0.1rem 0.2rem;
-}
-
-.form {
-    display: flex;
-    flex-flow: column;
-    gap: 0.5rem;
-}
