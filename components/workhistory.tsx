@@ -1,6 +1,7 @@
 import styles from "../styles/WorkHistory.module.css";
 
 import workExperience from "../data/experience";
+import TimePeriod from "./timePeriod";
 
 interface ExperienceProps {
   company: string;
@@ -19,9 +20,7 @@ const Experience = ({
 }: ExperienceProps) => (
   <li className={styles.experience}>
     <span className={styles.title}>{title}</span>
-    <span className={styles.period}>
-      <time>{start}</time>-<time>{end}</time>
-    </span>
+    <TimePeriod start={start} end={end} />
     <div className={styles.company}>
       <span className={styles.companyName}>{company}</span>
       <span className={styles.location}>{location}</span>

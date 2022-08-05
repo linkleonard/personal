@@ -20,11 +20,6 @@
     flex: 0 1 auto;
 }
 
-.period {
-    flex: 1 1 50%;
-    text-align: right;
-}
-
 .company {
     display: flex;
     flex: 0 1 100%;
