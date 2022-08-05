@@ -57,7 +57,7 @@ const ProficiencyFilters = ({ filters, onUpdate }: ProficiencyFiltersProps) => {
 
   return (
     <form className={styles.form}>
-      <label>Filters</label>
+      <label className={styles.title}>Filters</label>
       <Filter name="Proficiency Level">
         {proficiencyFilters.map(([label, field]) => (
           <FilterToggle
