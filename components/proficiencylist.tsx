@@ -1,5 +1,5 @@
 import { MouseEventHandler, useMemo, useState } from "react";
-import { Proficiency, Skill } from "../data/types";
+import { Language, Proficiency, Skill } from "../data/types";
 import proficiencies from "../data/proficiencies";
 import styles from "../styles/ProficiencyList.module.css";
 
@@ -19,8 +19,8 @@ const proficiencyFilters = [
   ["Familiar", "proficiency-low"],
 ];
 
-const categoryFilters = Object.values(Skill).map((key) => {
-  return [key, `skill-${key}`];
+const languageFilters = Object.values(Language).map((key) => {
+  return [key, `lang-${key}`];
 });
 
 function matchesFeature(feature: string, proficiency: Proficiency): boolean {
@@ -28,8 +28,8 @@ function matchesFeature(feature: string, proficiency: Proficiency): boolean {
   if (featureType === "proficiency") {
     return proficiency.level === featureValue;
   }
-  if (featureType === "skill") {
-    return proficiency.category.find((c) => c === featureValue) !== undefined;
+  if (featureType === "lang") {
+    return proficiency.tags.find((c) => c === featureValue) !== undefined;
   }
   return false;
 }
@@ -70,8 +70,16 @@ const ProficiencyList = () => {
     <>
       <form>
         <span>Proficiency Level</span>
-
         {proficiencyFilters.map(([label, field]) => (
+          <FilterToggle
+            key={field}
+            onClick={updateFilter(field)}
+            label={label}
+          />
+        ))}
+
+        <span>Language</span>
+        {languageFilters.map(([label, field]) => (
           <FilterToggle
             key={field}
             onClick={updateFilter(field)}
@@ -93,7 +101,7 @@ const ProficiencyList = () => {
               <span className={styles.categoryName}>{skill}</span>
               <ul className={styles.skills}>
                 {filtered
-                  .filter((s) => s.category.includes(skill))
+                  .filter((s) => s.tags.includes(skill))
                   .map((s) => (
                     <li key={s.name}>{s.name}</li>
                   ))}

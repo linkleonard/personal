@@ -12,8 +12,19 @@ export enum Skill {
   Concept = "concept",
 }
 
+export enum Language {
+  Scala = "Scala",
+  Python = "Python",
+  CSharp = "C#",
+  SQL = "SQL",
+  Typescript = "Typescript",
+  Javascript = "Javascript",
+}
+
+export type Tag = Skill | Language;
+
 export interface Proficiency {
   name: string;
   level: Level;
-  category: Skill[];
+  tags: Tag[];
 }
