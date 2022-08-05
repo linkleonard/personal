@@ -1,6 +1,7 @@
 import { MouseEventHandler, useMemo, useState } from "react";
 import { Proficiency, Skill } from "../data/types";
 import proficiencies from "../data/proficiencies";
+import styles from "../styles/ProficiencyList.module.css";
 
 interface FilterToggleProps {
   onClick: MouseEventHandler<HTMLInputElement>;
@@ -14,7 +15,7 @@ const FilterToggle = ({ onClick, label }: FilterToggleProps) => (
 
 const proficiencyFilters = [
   ["Proficient", "proficiency-high"],
-  ["Comfortable", "proficiency-medium"],
+  ["Comfortable", "proficiency-mid"],
   ["Familiar", "proficiency-low"],
 ];
 
@@ -77,35 +78,30 @@ const ProficiencyList = () => {
             label={label}
           />
         ))}
-
-        <span>Skills</span>
-        {categoryFilters.map(([label, field]) => (
-          <FilterToggle
-            key={field}
-            onClick={updateFilter(field)}
-            label={label}
-          />
-        ))}
       </form>
 
-      {[
-        Skill.Language,
-        Skill.Framework,
-        Skill.Database,
-        Skill.Concept,
-        Skill.Technology,
-      ].map((skill) => {
-        return (
-          <>
-            <span>{skill}</span>
-            {filtered
-              .filter((s) => s.category.includes(skill))
-              .map((s) => (
-                <li key={s.name}>{s.name}</li>
-              ))}
-          </>
-        );
-      })}
+      <ul className={styles.skillList}>
+        {[
+          Skill.Language,
+          Skill.Framework,
+          Skill.Database,
+          Skill.Concept,
+          Skill.Technology,
+        ].map((skill) => {
+          return (
+            <li key={skill} className={styles.category}>
+              <span className={styles.categoryName}>{skill}</span>
+              <ul className={styles.skills}>
+                {filtered
+                  .filter((s) => s.category.includes(skill))
+                  .map((s) => (
+                    <li key={s.name}>{s.name}</li>
+                  ))}
+              </ul>
+            </li>
+          );
+        })}
+      </ul>
     </>
   );
 };
