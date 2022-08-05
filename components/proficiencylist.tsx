@@ -15,6 +15,27 @@ function matchesFeature(feature: string, proficiency: Proficiency): boolean {
   return false;
 }
 
+type SkillToLabel = Record<Skill, string>;
+const skillToLabel: SkillToLabel = {
+  [Skill.Language]: "Language",
+  [Skill.Technology]: "Technology",
+  [Skill.Framework]: "Framework",
+  [Skill.Database]: "Database",
+  [Skill.Concept]: "Concept",
+  [Skill.Backend]: "Backend",
+  [Skill.Frontend]: "Frontend",
+  [Skill.Vendor]: "Vendor",
+};
+
+const categoriesToGroup = [
+  Skill.Language,
+  Skill.Framework,
+  Skill.Database,
+  Skill.Concept,
+  Skill.Vendor,
+  Skill.Technology,
+];
+
 function getMatchingFeatures(
   proficiencies: Proficiency[],
   filters: Set<string>
@@ -39,36 +60,34 @@ const ProficiencyList = () => {
     [filters]
   );
 
+  const proficienciesBySkill = useMemo(
+    () =>
+      categoriesToGroup.flatMap((skill) => {
+        const matching = filtered
+          .filter((s) => s.tags.includes(skill))
+          .map((s) => <li key={s.name}>{s.name}</li>);
+
+        if (matching.length === 0) {
+          return [];
+        }
+
+        return [
+          <li key={skill} className={styles.category}>
+            <span className={styles.categoryName}>{skillToLabel[skill]}</span>
+            <ul className={styles.skills}>{matching}</ul>
+          </li>,
+        ];
+      }),
+    [filtered]
+  );
+
   return (
     <>
       <ProficiencyFilters
         filters={filters}
         onUpdate={(updated) => setFilters(updated)}
       />
-      <ul className={styles.skillList}>
-        {[
-          Skill.Language,
-          Skill.Framework,
-          Skill.Database,
-          Skill.Concept,
-          Skill.Vendor,
-          Skill.Technology,
-        ].map((skill) => {
-          const matching = filtered
-            .filter((s) => s.tags.includes(skill))
-            .map((s) => <li key={s.name}>{s.name}</li>);
-          return (
-            <>
-              {matching.length ? (
-                <li key={skill} className={styles.category}>
-                  <span className={styles.categoryName}>{skill}</span>
-                  <ul className={styles.skills}>{matching}</ul>
-                </li>
-              ) : null}
-            </>
-          );
-        })}
-      </ul>
+      <ul className={styles.skillList}>{proficienciesBySkill}</ul>
     </>
   );
 };
