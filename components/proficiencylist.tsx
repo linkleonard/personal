@@ -82,13 +82,13 @@ const ProficiencyList = () => {
   );
 
   return (
-    <>
+    <div className={styles.proficiencyList}>
       <ProficiencyFilters
         filters={filters}
         onUpdate={(updated) => setFilters(updated)}
       />
       <ul className={styles.skillList}>{proficienciesBySkill}</ul>
-    </>
+    </div>
   );
 };
 
