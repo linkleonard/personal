@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Education from "../components/education";
 import Footer from "../components/footer";
 import NavBar from "../components/navbar";
 import ProficiencyList from "../components/proficiencylist";
@@ -23,6 +24,10 @@ const Resume = () => (
       <section>
         <h2>Proficiencies</h2>
         <ProficiencyList />
+      </section>
+      <section>
+        <h2>Education</h2>
+        <Education />
       </section>
     </main>
     <Footer />
