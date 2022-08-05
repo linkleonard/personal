@@ -1,0 +1,33 @@
+.enrollment {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.25rem;
+  align-items: baseline;
+}
+
+.school {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.25rem;
+  align-items: baseline;
+  margin-bottom: 0.25rem;
+  flex: 1 1 50%;
+}
+
+.enrollment h3,
+.enrollment h4 {
+  margin: 0;
+}
+
+.period {
+  flex: 0 0 auto;
+}
+
+.title {
+  flex: 1 0 100%;
+  margin: 0;
+}
+
+.enrollment ul {
+  margin-left: 1rem;
+}
