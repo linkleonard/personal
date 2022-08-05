@@ -1,4 +1,4 @@
-import { MouseEventHandler, useMemo, useState } from "react";
+import { MouseEventHandler, useMemo, useState, ReactNode } from "react";
 import { Language, Proficiency, Skill } from "../data/types";
 import proficiencies from "../data/proficiencies";
 import styles from "../styles/ProficiencyList.module.css";
@@ -8,7 +8,7 @@ interface FilterToggleProps {
   label: string;
 }
 const FilterToggle = ({ onClick, label }: FilterToggleProps) => (
-  <label>
+  <label className={styles.filterLabel}>
     <input type="checkbox" onClick={onClick} /> {label}
   </label>
 );
@@ -38,6 +38,13 @@ function matchesFeature(feature: string, proficiency: Proficiency): boolean {
   }
   return false;
 }
+
+const Filter = ({ name, children }: { name: string; children: ReactNode }) => (
+  <div className={styles.filter}>
+    <span>{name}</span>
+    <div>{children}</div>
+  </div>
+);
 
 const ProficiencyList = () => {
   const [filters, setFilters] = useState(new Set<string>());
@@ -73,33 +80,36 @@ const ProficiencyList = () => {
 
   return (
     <>
-      <form>
-        <span>Proficiency Level</span>
-        {proficiencyFilters.map(([label, field]) => (
-          <FilterToggle
-            key={field}
-            onClick={updateFilter(field)}
-            label={label}
-          />
-        ))}
+      <form className={styles.form}>
+        <label>Filters</label>
+        <Filter name="Proficiency Level">
+          {proficiencyFilters.map(([label, field]) => (
+            <FilterToggle
+              key={field}
+              onClick={updateFilter(field)}
+              label={label}
+            />
+          ))}
+        </Filter>
 
-        <span>Language</span>
-        {languageFilters.map(([label, field]) => (
-          <FilterToggle
-            key={field}
-            onClick={updateFilter(field)}
-            label={label}
-          />
-        ))}
-
-        <span>Discipline</span>
-        {disciplineFilters.map(([label, field]) => (
-          <FilterToggle
-            key={field}
-            onClick={updateFilter(field)}
-            label={label}
-          />
-        ))}
+        <Filter name="Language">
+          {languageFilters.map(([label, field]) => (
+            <FilterToggle
+              key={field}
+              onClick={updateFilter(field)}
+              label={label}
+            />
+          ))}
+        </Filter>
+        <Filter name="Discipline">
+          {disciplineFilters.map(([label, field]) => (
+            <FilterToggle
+              key={field}
+              onClick={updateFilter(field)}
+              label={label}
+            />
+          ))}
+        </Filter>
       </form>
 
       <ul className={styles.skillList}>
