@@ -1,3 +1,5 @@
+import styles from "../styles/WorkHistory.module.css";
+
 interface ExperienceProps {
   company: string;
   period: [string, string];
@@ -13,21 +15,28 @@ const Experience = ({
   title,
   responsibilities,
 }: ExperienceProps) => (
-  <li>
-    <h3>{company}</h3>
-    <span className="location">{location}</span>
-    <time>{startTime}</time>-<time>{endTime}</time>
-    <p>{title}</p>
-    <ul>
+  <li className={styles.experience}>
+    <span className={styles.title}>{title}</span>
+    <span className={styles.period}>
+      <time>{startTime}</time>-<time>{endTime}</time>
+    </span>
+    <div className={styles.company}>
+      <span className={styles.companyName}>{company}</span>
+      <span className={styles.location}>{location}</span>
+    </div>
+
+    <ul className={styles.responsibilities}>
       {responsibilities.map((r, i) => (
-        <li key={i}>{r}</li>
+        <li className={styles.responsibility} key={i}>
+          {r}
+        </li>
       ))}
     </ul>
   </li>
 );
 
 const WorkHistory = () => (
-  <ul>
+  <ul className={styles.history}>
     <Experience
       company="Hopper Inc."
       period={["November 2020", "Now"]}
