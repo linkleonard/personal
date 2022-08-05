@@ -54,17 +54,18 @@ const ProficiencyList = () => {
           Skill.Vendor,
           Skill.Technology,
         ].map((skill) => {
+          const matching = filtered
+            .filter((s) => s.tags.includes(skill))
+            .map((s) => <li key={s.name}>{s.name}</li>);
           return (
-            <li key={skill} className={styles.category}>
-              <span className={styles.categoryName}>{skill}</span>
-              <ul className={styles.skills}>
-                {filtered
-                  .filter((s) => s.tags.includes(skill))
-                  .map((s) => (
-                    <li key={s.name}>{s.name}</li>
-                  ))}
-              </ul>
-            </li>
+            <>
+              {matching.length ? (
+                <li key={skill} className={styles.category}>
+                  <span className={styles.categoryName}>{skill}</span>
+                  <ul className={styles.skills}>{matching}</ul>
+                </li>
+              ) : null}
+            </>
           );
         })}
       </ul>
