@@ -10,6 +10,9 @@ export enum Skill {
   Framework = "framework",
   Database = "database",
   Concept = "concept",
+  Backend = "backend",
+  Frontend = "frontend",
+  Vendor = "vendor",
 }
 
 export enum Language {

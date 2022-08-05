@@ -23,12 +23,17 @@ const languageFilters = Object.values(Language).map((key) => {
   return [key, `lang-${key}`];
 });
 
+const disciplineFilters = [
+  ["Frontend", "discipline-frontend"],
+  ["Backend", "discipline-backend"],
+];
+
 function matchesFeature(feature: string, proficiency: Proficiency): boolean {
   const [featureType, featureValue] = feature.split("-");
   if (featureType === "proficiency") {
     return proficiency.level === featureValue;
   }
-  if (featureType === "lang") {
+  if (featureType === "lang" || featureType == "discipline") {
     return proficiency.tags.find((c) => c === featureValue) !== undefined;
   }
   return false;
@@ -86,6 +91,15 @@ const ProficiencyList = () => {
             label={label}
           />
         ))}
+
+        <span>Discipline</span>
+        {disciplineFilters.map(([label, field]) => (
+          <FilterToggle
+            key={field}
+            onClick={updateFilter(field)}
+            label={label}
+          />
+        ))}
       </form>
 
       <ul className={styles.skillList}>
@@ -94,6 +108,7 @@ const ProficiencyList = () => {
           Skill.Framework,
           Skill.Database,
           Skill.Concept,
+          Skill.Vendor,
           Skill.Technology,
         ].map((skill) => {
           return (
