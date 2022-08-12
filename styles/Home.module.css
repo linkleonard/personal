@@ -10,6 +10,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.4) 80%, rgba(0, 0, 0, 0.8) 100%),
+    linear-gradient(to left, rgba(0, 0, 0, 0.4) 80%, rgba(0, 0, 0, 0.8) 100%),
+    url(../assets/nyc.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 .footer {
