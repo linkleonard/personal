@@ -9,11 +9,15 @@
     flex-flow: row wrap;
     gap: 0.5rem;
     align-items: baseline;
-
+    border: 2px solid #333;
+    padding: 1rem;
+    background-color: rgba(30, 30, 30, 0.4);
+    position: relative;
+    transition: all 0.5s;
 }
 
-.employment {
-
+.experience:hover {
+    background-color: rgba(30, 30, 30, 0.8);
 }
 
 .title {
