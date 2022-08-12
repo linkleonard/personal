@@ -1,5 +1,6 @@
 import { MouseEventHandler, ReactNode } from "react";
 import { Language } from "../data/types";
+import Card from "../components/card";
 import styles from "../styles/ProficiencyFilter.module.css";
 
 interface FilterToggleProps {
@@ -56,7 +57,7 @@ const ProficiencyFilters = ({ filters, onUpdate }: ProficiencyFiltersProps) => {
   };
 
   return (
-    <form className={styles.form}>
+    <Card className={styles.form} component="form">
       <label className={styles.title}>Filters</label>
       <Filter name="Proficiency Level">
         {proficiencyFilters.map(([label, field]) => (
@@ -86,7 +87,7 @@ const ProficiencyFilters = ({ filters, onUpdate }: ProficiencyFiltersProps) => {
           />
         ))}
       </Filter>
-    </form>
+    </Card>
   );
 };
 export default ProficiencyFilters;

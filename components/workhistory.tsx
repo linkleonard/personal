@@ -19,7 +19,7 @@ const Experience = ({
   title,
   responsibilities,
 }: ExperienceProps) => (
-  <Card className={styles.experience}>
+  <Card className={styles.experience} component="li">
     <span className={styles.title}>{title}</span>
     <TimePeriod start={start} end={end} />
     <div className={styles.company}>

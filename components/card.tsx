@@ -1,11 +1,15 @@
 import styles from "../styles/Card.module.css";
-import { ReactNode } from "react";
+import { ReactNode, ElementType, createElement } from "react";
 
 interface CardProps {
   className: string;
   children: ReactNode;
+  component?: ElementType;
 }
-const Card = ({ className, children }: CardProps) => (
-  <li className={`${styles.card} ${className}`}>{children}</li>
-);
+const Card = ({ component = "div", className, ...props }: CardProps) =>
+  createElement(component, {
+    ...props,
+    className: `${styles.card} ${className}`,
+  });
+
 export default Card;
