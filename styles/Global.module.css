@@ -1,0 +1,5 @@
+.outbound::after {
+  content: '\1F865';
+  vertical-align: super;
+  font-size: 0.8rem;
+}
