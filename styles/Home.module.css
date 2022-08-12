@@ -1,4 +1,9 @@
 .container {
+  display: flex;
+  flex-flow: column;
+}
+
+.container > * {
   padding: 0 2rem;
 }
 
@@ -14,7 +19,7 @@
     linear-gradient(to right, rgba(0, 0, 0, 0.4) 80%, rgba(0, 0, 0, 0.8) 100%),
     linear-gradient(to left, rgba(0, 0, 0, 0.4) 80%, rgba(0, 0, 0, 0.8) 100%),
     url(../assets/nyc.jpg);
-  background-position: center;
+  background-position: top 20%;
   background-size: cover;
 }
 
