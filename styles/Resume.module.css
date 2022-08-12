@@ -10,6 +10,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  /* https://search-production.openverse.engineering/image/f3aab140-e652-46f1-8d56-0b94ab2dc9b8 */
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.4) 80%, rgba(0, 0, 0, 0.8) 100%),
+    linear-gradient(to left, rgba(0, 0, 0, 0.4) 80%, rgba(0, 0, 0, 0.8) 100%),
+    url("../assets/black-marble.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
 }
 
 .title {
