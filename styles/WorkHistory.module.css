@@ -9,15 +9,7 @@
     flex-flow: row wrap;
     gap: 0.5rem;
     align-items: baseline;
-    border: 2px solid rgba(248, 248, 248, 0.8);
-    padding: 1rem;
-    background-color: rgba(255, 255, 255, 0.4);
     position: relative;
-    transition: all 0.5s;
-}
-
-.experience:hover {
-    background-color: rgba(255, 255, 255, 0.6);
 }
 
 .title {
@@ -50,16 +42,4 @@
 .responsibility {
     margin-left: 1.5rem;
     list-style-type: circle;
-}
-
-
-@media(prefers-color-scheme: dark) {
-  .experience {
-    border: 2px solid #333;
-    background-color: rgba(30, 30, 30, 0.4);
-  }
-
-  .experience:hover {
-    background-color: rgba(30, 30, 30, 0.8);
-  }
 }

@@ -1,5 +1,6 @@
 import styles from "../styles/WorkHistory.module.css";
 
+import Card from "../components/card";
 import workExperience from "../data/experience";
 import TimePeriod from "./timePeriod";
 
@@ -18,7 +19,7 @@ const Experience = ({
   title,
   responsibilities,
 }: ExperienceProps) => (
-  <li className={styles.experience}>
+  <Card className={styles.experience}>
     <span className={styles.title}>{title}</span>
     <TimePeriod start={start} end={end} />
     <div className={styles.company}>
@@ -33,7 +34,7 @@ const Experience = ({
         </li>
       ))}
     </ul>
-  </li>
+  </Card>
 );
 
 const WorkHistory = () => (
