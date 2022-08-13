@@ -14,6 +14,10 @@
   flex: 1 1 50%;
 }
 
+.school i {
+  font-size: 0.9em;
+}
+
 .enrollment h3,
 .enrollment h4 {
   margin: 0;
