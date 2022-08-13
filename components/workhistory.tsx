@@ -1,8 +1,8 @@
 import styles from "../styles/WorkHistory.module.css";
 
-import Card from "../components/card";
+import Card from "./visual/Card";
 import workExperience from "../data/experience";
-import TimePeriod from "./timePeriod";
+import TimePeriod from "./visual/TimePeriod";
 
 interface ExperienceProps {
   company: string;

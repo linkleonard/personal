@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Banner from "../components/Banner";
+import Banner from "../components/visual/Banner";
 import Education from "../components/education";
 import Footer from "../components/footer";
 import NavBar from "../components/navbar";

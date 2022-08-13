@@ -1,6 +1,6 @@
 import styles from "../styles/Education.module.css";
-import Card from "./card";
-import TimePeriod from "./timePeriod";
+import Card from "./visual/Card";
+import TimePeriod from "./visual/TimePeriod";
 
 const Education = () => (
   <ul>

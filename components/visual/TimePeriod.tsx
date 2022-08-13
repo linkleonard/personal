@@ -1,4 +1,4 @@
-import styles from "../styles/TimePeriod.module.css";
+import styles from "../../styles/TimePeriod.module.css";
 
 interface TimePeriodProps {
   start: string;
