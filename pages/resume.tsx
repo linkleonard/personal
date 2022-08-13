@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Banner from "../components/Banner";
 import Education from "../components/education";
 import Footer from "../components/footer";
 import NavBar from "../components/navbar";
@@ -18,15 +19,15 @@ const Resume = () => (
     <main className={styles.main}>
       <h1 className={styles.title}>Resume</h1>
       <section>
-        <h2>Professional Experience</h2>
+        <Banner component="h2">Professional Experience</Banner>
         <WorkHistory />
       </section>
       <section>
-        <h2>Proficiencies</h2>
+        <Banner component="h2">Proficiencies</Banner>
         <ProficiencyList />
       </section>
       <section>
-        <h2>Education</h2>
+        <Banner component="h2">Education</Banner>
         <Education />
       </section>
     </main>
