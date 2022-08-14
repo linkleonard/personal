@@ -99,7 +99,7 @@ const ProficiencyList = () => {
         filters={filters}
         onUpdate={(updated) => setFilters(updated)}
       />
-      <Card>{proficienciesBySkill}</Card>
+      <Card className={styles.proficiencies}>{proficienciesBySkill}</Card>
     </div>
   );
 };

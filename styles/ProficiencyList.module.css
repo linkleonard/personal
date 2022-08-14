@@ -4,12 +4,14 @@
     padding: 1rem;
 }
 
-.categoryName {
-    font-weight: bold;
+.proficiencies {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
 }
 
-.proficiencyFilter {
-    grid-column: 1 / -1;
+.categoryName {
+    font-weight: bold;
 }
 
 .skills li::before {
@@ -25,7 +27,7 @@
 
 
 @media (max-width: 600px) {
-    .proficiencyList {
+    .proficiencies {
         grid-template-columns: 1fr;
     }
 
@@ -40,10 +42,11 @@
 }
 
 @media (min-width: 600px) and (max-width: 1200px) {
-    .proficiencyList {
+    .proficiencies {
         grid-template-columns: 1fr 4fr;
         gap: 1rem;
         margin: 0 calc(10% + 1rem);
+        padding: 2rem 0;
     }
 
     .categoryName {
@@ -56,10 +59,11 @@
 }
 
 @media (min-width: 1200px) {
-    .proficiencyList {
+    .proficiencies {
         grid-template-columns: 1fr 5fr;
         gap: 1rem;
         margin: 0 calc(10% + 1rem);
+        padding: 2rem 0;
     }
 
     .categoryName {
