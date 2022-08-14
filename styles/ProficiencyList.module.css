@@ -1,77 +1,76 @@
 .proficiencyList {
-    display: grid;
-    gap: 1rem;
-    padding: 1rem;
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
 }
 
 .proficiencies {
-    display: grid;
-    gap: 1rem;
-    padding: 1rem;
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
 }
 
 .categoryName {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .skills li::before {
-    content: "\25C8";
-    margin-right: 0.2em;
+  content: "\25C8";
+  margin-right: 0.2em;
 }
 
 .skills {
-    display: grid;
-    margin: 0;
-    gap: 0.5rem;
+  display: grid;
+  margin: 0;
+  gap: 0.5rem;
 }
 
-
 @media (max-width: 600px) {
-    .proficiencies {
-        grid-template-columns: 1fr;
-    }
+  .proficiencies {
+    grid-template-columns: 1fr;
+  }
 
-    .skills + .categoryName {
-        margin-top: 1rem;
-    }
+  .skills + .categoryName {
+    margin-top: 1rem;
+  }
 
-    .skills {
-        grid-template-columns: repeat(2, 1fr);
-        padding: 0 2rem 0 1rem;
-    }
+  .skills {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 2rem 0 1rem;
+  }
 }
 
 @media (min-width: 600px) and (max-width: 1200px) {
-    .proficiencies {
-        grid-template-columns: 1fr 4fr;
-        gap: 1rem;
-        margin: 0 calc(10% + 1rem);
-        padding: 2rem 0;
-    }
+  .proficiencies {
+    grid-template-columns: 1fr 4fr;
+    gap: 1rem;
+    margin: 0 calc(10% + 1rem);
+    padding: 2rem 0;
+  }
 
-    .categoryName {
-        text-align: right;
-    }
+  .categoryName {
+    text-align: right;
+  }
 
-    .skills {
-        grid-template-columns: repeat(3, 1fr);
-    }
+  .skills {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (min-width: 1200px) {
-    .proficiencies {
-        grid-template-columns: 1fr 5fr;
-        gap: 1rem;
-        margin: 0 calc(10% + 1rem);
-        padding: 2rem 0;
-    }
+  .proficiencies {
+    grid-template-columns: 1fr 5fr;
+    gap: 1rem;
+    margin: 0 calc(10% + 1rem);
+    padding: 2rem 0;
+  }
 
-    .categoryName {
-        text-align: right;
-    }
+  .categoryName {
+    text-align: right;
+  }
 
-    .skills {
-        grid-template-columns: repeat(5, 1fr);
-        margin-right: 20%;
-    }
+  .skills {
+    grid-template-columns: repeat(5, 1fr);
+    margin-right: 20%;
+  }
 }

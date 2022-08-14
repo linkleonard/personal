@@ -1,7 +1,7 @@
 .period {
-    text-align: right;
+  text-align: right;
 }
 
 .time > * + *::before {
-    content: " "
+  content: " ";
 }

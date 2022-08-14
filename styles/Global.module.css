@@ -1,5 +1,5 @@
 .outbound::after {
-  content: '\1F865';
+  content: "\1F865";
   font-size: 0.8rem;
 
   display: inline-block;

@@ -1,58 +1,58 @@
 .history {
-    display: flex;
-    flex-flow: column;
-    gap: 2rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
+  display: flex;
+  flex-flow: column;
+  gap: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .experience {
-    display: flex;
-    flex-flow: row wrap;
-    gap: 0.5rem;
-    align-items: baseline;
-    position: relative;
-    justify-content: space-between;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.5rem;
+  align-items: baseline;
+  position: relative;
+  justify-content: space-between;
 }
 
 .title {
-    flex: 0 1 auto;
-    font-weight: bold;
+  flex: 0 1 auto;
+  font-weight: bold;
 }
 
 .company {
-    display: flex;
-    flex: 0 1 100%;
-    margin: 0;
-    gap: 0.5rem;
+  display: flex;
+  flex: 0 1 100%;
+  margin: 0;
+  gap: 0.5rem;
 
-    font-style: italic;
+  font-style: italic;
 }
 
 .location {
-    flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 .location::before {
-    content: '\2014';
-    margin-right: 0.5rem;
+  content: "\2014";
+  margin-right: 0.5rem;
 }
 
 .period {
-    position: absolute;
-    right: 1rem;
-    top: -1rem;
-    background: #f6f6ff;
-    border: 2px solid white;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
+  position: absolute;
+  right: 1rem;
+  top: -1rem;
+  background: #f6f6ff;
+  border: 2px solid white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }
 
 .responsibilities {
-    flex: 1 0 100%;
+  flex: 1 0 100%;
 }
 
 .responsibility {
-    margin-left: 1.5rem;
-    list-style-type: circle;
+  margin-left: 1.5rem;
+  list-style-type: circle;
 }
