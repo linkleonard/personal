@@ -3,6 +3,7 @@
   flex-flow: row wrap;
   gap: 0.25rem;
   align-items: baseline;
+  position: relative;
 }
 
 .school {
@@ -24,7 +25,13 @@
 }
 
 .period {
-  flex: 0 0 auto;
+  position: absolute;
+  right: 1rem;
+  top: -1rem;
+  background: #f6f6ff;
+  border: 2px solid white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }
 
 .title {

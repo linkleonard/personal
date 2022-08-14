@@ -6,11 +6,12 @@ const Education = () => (
   <ul>
     <Card className={styles.enrollment}>
       <div className={styles.school}>
-        <h3>NYU Tandon School of Engineering </h3>
+        <h3>NYU Tandon</h3>
+        <i>School of Engineering</i>
         <i>formerly Polytechnic Institute of NYU</i>
       </div>
       <TimePeriod
-        short
+        className={styles.period}
         start={{
           month: "September",
           year: 2010,

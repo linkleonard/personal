@@ -1,7 +1,7 @@
 .history {
     display: flex;
     flex-flow: column;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .experience {
@@ -10,6 +10,7 @@
     gap: 0.5rem;
     align-items: baseline;
     position: relative;
+    justify-content: space-between;
 }
 
 .title {
@@ -34,6 +35,15 @@
     margin-right: 0.5rem;
 }
 
+.period {
+    position: absolute;
+    right: 1rem;
+    top: -1rem;
+    background: #f6f6ff;
+    border: 2px solid white;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
 
 .responsibilities {
     flex: 1 0 100%;

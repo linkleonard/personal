@@ -19,13 +19,13 @@ const TimeDisplay = ({ children }: TimeDisplayProps) => (
 );
 
 interface TimePeriodProps {
+  className?: string;
   start: Time;
   end: Time;
-  short?: boolean;
 }
 
-const TimePeriod = ({ start, end, short }: TimePeriodProps) => (
-  <span className={styles.period}>
+const TimePeriod = ({ className, start, end }: TimePeriodProps) => (
+  <span className={`${styles.period} ${className}`}>
     <TimeDisplay>{start}</TimeDisplay>&ndash;
     <TimeDisplay>{end}</TimeDisplay>
   </span>

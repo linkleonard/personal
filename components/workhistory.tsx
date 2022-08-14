@@ -22,7 +22,7 @@ const Experience = ({
 }: ExperienceProps) => (
   <Card className={styles.experience} component="li">
     <span className={styles.title}>{title}</span>
-    <TimePeriod start={start} end={end} />
+    <TimePeriod className={styles.period} start={start} end={end} />
     <div className={styles.company}>
       <span className={styles.companyName}>{company}</span>
       <span className={styles.location}>{location}</span>
