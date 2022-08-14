@@ -1,5 +1,9 @@
 .outbound::after {
   content: '\1F865';
-  vertical-align: super;
   font-size: 0.8rem;
+
+  display: inline-block;
+  position: relative;
+  vertical-align: text-top;
+  transform: translateY(-0.3em);
 }

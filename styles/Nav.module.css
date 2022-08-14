@@ -1,9 +1,20 @@
-.name {
-    margin: 1rem;
-}
-
 .nav {
     display: flex;
     align-items: baseline;
     gap: 10px;
+    align-items: center;
+}
+
+.name {
+    flex: 0 0 auto;
+    margin: 1rem;
+}
+
+
+.nav ul {
+    flex: 1 1 auto;
+    flex-flow: row wrap;
+    display: flex;
+    vertical-align: text-bottom;
+    gap: 0.5rem;
 }
