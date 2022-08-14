@@ -31,3 +31,9 @@ export interface Proficiency {
   level: Level;
   tags: Tag[];
 }
+
+export interface Time {
+  month?: string;
+  year?: number;
+  description?: string;
+}

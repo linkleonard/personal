@@ -3,10 +3,11 @@ import styles from "../styles/WorkHistory.module.css";
 import Card from "./visual/Card";
 import workExperience from "../data/experience";
 import TimePeriod from "./visual/TimePeriod";
+import { Time } from "../data/types";
 
 interface ExperienceProps {
   company: string;
-  period: { start: string; end: string };
+  period: { start: Time; end: Time };
   location: string;
   title: string;
   responsibilities: string[];

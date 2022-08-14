@@ -1,7 +1,10 @@
 const WORK_EXPERIENCE = [
   {
     company: "Hopper Inc.",
-    period: { start: "November 2020", end: "Now" },
+    period: {
+      start: { month: "November", year: 2020 },
+      end: { description: "Now" },
+    },
     title: "Senior Software Engineer - Full Stack",
     location: "New York City, NY",
     responsibilities: [
@@ -13,7 +16,10 @@ const WORK_EXPERIENCE = [
   },
   {
     company: "Hopper Inc.",
-    period: { start: "May 2019", end: "November 2020" },
+    period: {
+      start: { month: "May", year: 2019 },
+      end: { month: "November", year: 2020 },
+    },
     title: "Software Engineer - Backend",
     location: "New York City, NY",
     responsibilities: [
@@ -24,7 +30,10 @@ const WORK_EXPERIENCE = [
   },
   {
     company: "Truveris",
-    period: { start: "December 2017", end: "April 2019" },
+    period: {
+      start: { month: "December", year: 2017 },
+      end: { month: "April", year: 2019 },
+    },
     title: "Software Engineer - Backend",
     location: "New York City, NY",
     responsibilities: [
@@ -35,7 +44,10 @@ const WORK_EXPERIENCE = [
   },
   {
     company: "Revintu",
-    period: { start: "February 2017", end: "November 2017" },
+    period: {
+      start: { month: "February", year: 2017 },
+      end: { month: "November", year: 2017 },
+    },
     title: "Software Engineer - Backend",
     location: "Stamford, CT",
     responsibilities: [
@@ -48,7 +60,10 @@ const WORK_EXPERIENCE = [
   },
   {
     company: "MedPilot",
-    period: { start: "June 2014", end: "February 2017" },
+    period: {
+      start: { month: "June", year: 2014 },
+      end: { month: "February", year: 2017 },
+    },
     title: "Co-Founder, Chief Technical Officer",
     location: "New York City, NY",
     responsibilities: [
@@ -62,7 +77,10 @@ const WORK_EXPERIENCE = [
   },
   {
     company: "Polytechnic Institute of NYU",
-    period: { start: "May 2012", end: "May 2014" },
+    period: {
+      start: { month: "May", year: 2012 },
+      end: { month: "May", year: 2014 },
+    },
     title: "Software Engineer Intern",
     location: "Brooklyn, NY",
     responsibilities: [
