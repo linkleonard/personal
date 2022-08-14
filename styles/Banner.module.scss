@@ -1,0 +1,15 @@
+@use "./colors.module" as c;
+
+.banner {
+  background: c.$light-primary-background-color;
+  display: inline-block;
+  position: relative;
+  padding: 1rem 2rem 1rem 1rem;
+  box-shadow: c.$light-primary-background-shadow-color 1rem 0;
+  border-radius: 0 2rem 2rem 0;
+
+  @media (prefers-color-scheme: dark) {
+    background: c.$dark-primary-background-color;
+    box-shadow: c.$dark-primary-background-shadow-color 1rem 0;
+  }
+}
