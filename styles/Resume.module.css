@@ -38,3 +38,13 @@
 .title {
   align-self: center;
 }
+
+.main section {
+  position: relative;
+  margin-top: 6rem;
+}
+
+.main section h2 {
+  position: absolute;
+  top: -5rem;
+}
