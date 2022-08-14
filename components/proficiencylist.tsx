@@ -3,6 +3,7 @@ import proficiencies from "../data/proficiencies";
 import { Proficiency, Skill } from "../data/types";
 import styles from "../styles/ProficiencyList.module.css";
 import ProficiencyFilters from "./proficiencyFilter";
+import Card from "./visual/Card";
 
 function matchesFeature(feature: string, proficiency: Proficiency): boolean {
   const [featureType, featureValue] = feature.split("-");
@@ -98,7 +99,7 @@ const ProficiencyList = () => {
         filters={filters}
         onUpdate={(updated) => setFilters(updated)}
       />
-      {proficienciesBySkill}
+      <Card>{proficienciesBySkill}</Card>
     </div>
   );
 };

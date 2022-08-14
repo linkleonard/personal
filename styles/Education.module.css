@@ -4,6 +4,8 @@
   gap: 0.25rem;
   align-items: baseline;
   position: relative;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .school {
