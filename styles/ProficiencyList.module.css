@@ -1,48 +1,11 @@
 .proficiencyList {
-    display: flex;
-    flex-flow: column;
-}
-
-
-.skillList {
-    display: flex;
-    flex-flow: column;
+    display: grid;
     gap: 1rem;
-
-    min-width: 60vw;
-    align-self: stretch;
-
+    padding: 1rem;
 }
 
-.category {
-    display: flex;
-    flex-flow: column;
-    gap: 0.5rem;
-    align-items: flex-start;
-}
-
-.category > span {
-    flex: 1 1 auto;
-    max-width: 10rem;
-    text-align: right;
-}
-
-.skills {
-    align-self: stretch;
-    max-height: 25vh;
-    display: flex;
-    flex-flow: column wrap;
-    gap: 0.5rem;
-    flex: 2 1 50%;
-    overflow-x: scroll;
-    align-content: flex-start;
-}
-
-.skills li {
-    border-radius: 0.5rem;
-    padding: 0.1rem 0.2rem;
-    display: flex;
-    width: 40vw;
+.proficiencyFilter {
+    grid-column: 1 / -1;
 }
 
 .skills li::before {
@@ -50,21 +13,56 @@
     margin-right: 0.2em;
 }
 
-@media (min-width: 600px) {
-    .category {
-        flex-flow: row wrap;
-        gap: 1rem;
+.skills {
+    display: grid;
+    margin: 0;
+    gap: 0.5rem;
+}
+
+
+@media (max-width: 600px) {
+    .proficiencyList {
+        grid-template-columns: 1fr;
     }
 
-    .category > span {
-        flex: 1 1 4rem;
+    .skills + .categoryName {
+        margin-top: 1rem;
     }
 
-    .skillList {
-        align-self: center;
-        max-width: 80vw;
-    }
     .skills {
-        max-height: 25vh;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1200px) {
+    .proficiencyList {
+        grid-template-columns: 1fr 4fr;
+        gap: 1rem;
+        margin: 0 calc(10% + 1rem);
+    }
+
+    .categoryName {
+        text-align: right;
+    }
+
+    .skills {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .proficiencyList {
+        grid-template-columns: 1fr 5fr;
+        gap: 1rem;
+        margin: 0 calc(10% + 1rem);
+    }
+
+    .categoryName {
+        text-align: right;
+    }
+
+    .skills {
+        grid-template-columns: repeat(5, 1fr);
+        margin-right: 20%;
     }
 }

@@ -36,10 +36,15 @@ const Filter = ({ name, children }: { name: string; children: ReactNode }) => (
 );
 
 interface ProficiencyFiltersProps {
+  className?: string;
   filters: Set<string>;
   onUpdate: (t: Set<string>) => void;
 }
-const ProficiencyFilters = ({ filters, onUpdate }: ProficiencyFiltersProps) => {
+const ProficiencyFilters = ({
+  className = "",
+  filters,
+  onUpdate,
+}: ProficiencyFiltersProps) => {
   const updateFilter = (
     feature: string
   ): MouseEventHandler<HTMLInputElement> => {
@@ -57,7 +62,7 @@ const ProficiencyFilters = ({ filters, onUpdate }: ProficiencyFiltersProps) => {
   };
 
   return (
-    <Card className={styles.form} component="form">
+    <Card className={`${styles.form} ${className}`} component="form">
       <label className={styles.title}>Filters</label>
       <Filter name="Proficiency Level">
         {proficiencyFilters.map(([label, field]) => (

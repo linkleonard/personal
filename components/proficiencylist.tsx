@@ -52,6 +52,21 @@ function getMatchingFeatures(
   );
 }
 
+interface SkillProps {
+  category: Skill;
+  skills: Proficiency[];
+}
+const SkillDisplay = ({ category, skills }: SkillProps) => (
+  <>
+    <span className={styles.categoryName}>{skillToLabel[category]}</span>
+    <ul className={styles.skills}>
+      {skills.map((s) => (
+        <li key={s.name}>{s.name}</li>
+      ))}
+    </ul>
+  </>
+);
+
 const ProficiencyList = () => {
   const [filters, setFilters] = useState(new Set<string>());
 
@@ -63,19 +78,14 @@ const ProficiencyList = () => {
   const proficienciesBySkill = useMemo(
     () =>
       categoriesToGroup.flatMap((skill) => {
-        const matching = filtered
-          .filter((s) => s.tags.includes(skill))
-          .map((s) => <li key={s.name}>{s.name}</li>);
+        const matching = filtered.filter((s) => s.tags.includes(skill));
 
         if (matching.length === 0) {
           return [];
         }
 
         return [
-          <li key={skill} className={styles.category}>
-            <span className={styles.categoryName}>{skillToLabel[skill]}</span>
-            <ul className={styles.skills}>{matching}</ul>
-          </li>,
+          <SkillDisplay key={skill} category={skill} skills={matching} />,
         ];
       }),
     [filtered]
@@ -84,10 +94,11 @@ const ProficiencyList = () => {
   return (
     <div className={styles.proficiencyList}>
       <ProficiencyFilters
+        className={styles.proficiencyFilter}
         filters={filters}
         onUpdate={(updated) => setFilters(updated)}
       />
-      <ul className={styles.skillList}>{proficienciesBySkill}</ul>
+      {proficienciesBySkill}
     </div>
   );
 };
