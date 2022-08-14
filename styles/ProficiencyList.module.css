@@ -4,6 +4,10 @@
     padding: 1rem;
 }
 
+.categoryName {
+    font-weight: bold;
+}
+
 .proficiencyFilter {
     grid-column: 1 / -1;
 }
@@ -31,6 +35,7 @@
 
     .skills {
         grid-template-columns: repeat(2, 1fr);
+        padding: 0 2rem 0 1rem;
     }
 }
 

@@ -15,6 +15,7 @@
 
 .title {
     flex: 0 1 auto;
+    font-weight: bold;
 }
 
 .company {
