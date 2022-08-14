@@ -1,8 +1,13 @@
 .nav {
     display: flex;
-    align-items: baseline;
     gap: 10px;
     align-items: center;
+}
+
+@media (min-width: 350px) {
+    .nav {
+        align-items: baseline;
+   }
 }
 
 .name {
