@@ -6,6 +6,15 @@
   position: relative;
   margin-left: 2rem;
   margin-right: 2rem;
+
+  h3,
+  h4 {
+    margin: 0;
+  }
+
+  ul {
+    margin-left: 1rem;
+  }
 }
 
 .school {
@@ -15,22 +24,13 @@
   align-items: baseline;
   margin-bottom: 0.25rem;
   flex: 1 1 50%;
-}
 
-.school i {
-  font-size: 0.9em;
-}
-
-.enrollment h3,
-.enrollment h4 {
-  margin: 0;
+  i {
+    font-size: 0.9em;
+  }
 }
 
 .title {
   flex: 1 0 100%;
   margin: 0;
-}
-
-.enrollment ul {
-  margin-left: 1rem;
 }

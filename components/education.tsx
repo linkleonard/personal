@@ -1,4 +1,4 @@
-import styles from "../styles/Education.module.css";
+import styles from "../styles/Education.module.scss";
 import Card from "./visual/Card";
 import FloatTag from "./visual/FloatTag";
 import TimePeriod from "./visual/TimePeriod";

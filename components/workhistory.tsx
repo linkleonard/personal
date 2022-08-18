@@ -1,4 +1,4 @@
-import styles from "../styles/WorkHistory.module.css";
+import styles from "../styles/WorkHistory.module.scss";
 
 import Card from "./visual/Card";
 import workExperience from "../data/experience";

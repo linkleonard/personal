@@ -1,5 +1,5 @@
 import Link from "next/link";
-import global from "../styles/Global.module.css";
+import global from "../styles/Global.module.scss";
 import styles from "../styles/Nav.module.css";
 
 const NavBar = () => (

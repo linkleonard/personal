@@ -1,5 +1,5 @@
 import { Time } from "../../data/types";
-import styles from "../../styles/TimePeriod.module.css";
+import styles from "../../styles/TimePeriod.module.scss";
 
 interface TimeDisplayProps {
   children: Time;
