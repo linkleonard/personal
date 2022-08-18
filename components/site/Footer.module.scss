@@ -1,9 +1,14 @@
+@use "../../styles/colors.module.scss" as c;
+
 .footer {
   display: flex;
   padding: 2rem 0;
   border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
+
+  background: c.$light-primary-background-color;
+  border-top: 2px solid c.$light-primary-accent-border-color;
 
   @media (prefers-color-scheme: dark) {
     border-color: #222;

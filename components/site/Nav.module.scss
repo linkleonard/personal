@@ -1,3 +1,5 @@
+@use "../../styles/colors.module.scss" as c;
+
 .nav {
   display: flex;
   gap: 10px;
@@ -14,6 +16,9 @@
     vertical-align: text-bottom;
     gap: 0.5rem;
   }
+
+  background: c.$light-primary-background-color;
+  border-bottom: 2px solid c.$light-primary-accent-border-color;
 }
 
 .name {
