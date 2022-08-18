@@ -1,0 +1,18 @@
+@use "./colors.module" as c;
+
+.floatTag {
+  position: absolute;
+  right: 1rem;
+  top: -1rem;
+  color: c.$light-secondary-text-color;
+  background: c.$light-secondary-background-color;
+  border: 2px solid c.$light-secondary-border-color;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+
+  @media (prefers-color-scheme: dark) {
+    color: c.$dark-secondary-text-color;
+    background: c.$dark-secondary-background-color;
+    border: 2px solid c.$dark-secondary-border-color;
+  }
+}
