@@ -1,18 +1,18 @@
 @use "../../styles/colors.module" as c;
+@use "../../styles/layout.module" as l;
 
 .floatTag {
   position: absolute;
-  right: 1rem;
-  top: -1rem;
+  right: l.$float-tag-offset;
+  top: l.$float-tag-offset;
   color: c.$light-secondary-text-color;
   background: c.$light-secondary-background-color;
-  border: 2px solid c.$light-secondary-border-color;
+  border: l.$secondary-border-thickness solid c.$light-secondary-border-color;
   padding: 0.5rem;
-  border-radius: 0.5rem;
 
   @media (prefers-color-scheme: dark) {
     color: c.$dark-secondary-text-color;
     background: c.$dark-secondary-background-color;
-    border: 2px solid c.$dark-secondary-border-color;
+    border: l.$secondary-border-thickness solid c.$dark-secondary-border-color;
   }
 }
