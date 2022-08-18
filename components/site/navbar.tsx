@@ -1,6 +1,5 @@
 import Link from "next/link";
-import global from "../styles/Global.module.scss";
-import styles from "../styles/Nav.module.scss";
+import styles from "./Nav.module.scss";
 
 const NavBar = () => (
   <nav className={styles.nav}>
@@ -14,14 +13,14 @@ const NavBar = () => (
       </li>
       <li>
         <a
-          className={global.outbound}
+          className={styles.outbound}
           href="https://www.linkedin.com/in/leonard-law/"
         >
           LinkedIn
         </a>
       </li>
       <li>
-        <a className={global.outbound} href="https://github.com/linkleonard">
+        <a className={styles.outbound} href="https://github.com/linkleonard">
           GitHub
         </a>
       </li>

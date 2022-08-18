@@ -1,5 +1,5 @@
 import { createElement, ElementType, ReactNode } from "react";
-import styles from "../../styles/Banner.module.scss";
+import styles from "./Banner.module.scss";
 
 interface BannerProps {
   className?: string;

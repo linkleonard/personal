@@ -1,9 +1,9 @@
 import { useMemo, useState } from "react";
 import proficiencies from "../data/proficiencies";
 import { Proficiency, Skill } from "../data/types";
-import styles from "../styles/ProficiencyList.module.scss";
+import styles from "./ProficiencyList.module.scss";
 import ProficiencyFilters from "./proficiencyFilter";
-import Card from "./visual/Card";
+import Card from "./ui/Card";
 
 function matchesFeature(feature: string, proficiency: Proficiency): boolean {
   const [featureType, featureValue] = feature.split("-");

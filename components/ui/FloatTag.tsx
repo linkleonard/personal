@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import styles from "../../styles/FloatTag.module.scss";
+import styles from "./FloatTag.module.scss";
 
 interface FloatTagProps {
   children: ReactNode;

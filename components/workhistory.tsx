@@ -1,10 +1,10 @@
-import styles from "../styles/WorkHistory.module.scss";
+import styles from "./WorkHistory.module.scss";
 
-import Card from "./visual/Card";
+import Card from "./ui/Card";
 import workExperience from "../data/experience";
-import TimePeriod from "./visual/TimePeriod";
+import TimePeriod from "./ui/TimePeriod";
 import { Time } from "../data/types";
-import FloatTag from "./visual/FloatTag";
+import FloatTag from "./ui/FloatTag";
 
 interface ExperienceProps {
   company: string;

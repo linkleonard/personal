@@ -1,4 +1,4 @@
-@use "./colors.module" as c;
+@use "../../styles/colors.module" as c;
 
 .banner {
   background: c.$light-primary-background-color;

@@ -1,7 +1,7 @@
-import styles from "../styles/Education.module.scss";
-import Card from "./visual/Card";
-import FloatTag from "./visual/FloatTag";
-import TimePeriod from "./visual/TimePeriod";
+import styles from "./Education.module.scss";
+import Card from "./ui/Card";
+import FloatTag from "./ui/FloatTag";
+import TimePeriod from "./ui/TimePeriod";
 
 const Education = () => (
   <ul>

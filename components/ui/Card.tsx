@@ -1,4 +1,4 @@
-import styles from "../../styles/Card.module.scss";
+import styles from "./Card.module.scss";
 import { ReactNode, ElementType, createElement } from "react";
 
 interface CardProps {
