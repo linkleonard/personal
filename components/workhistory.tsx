@@ -4,6 +4,7 @@ import Card from "./visual/Card";
 import workExperience from "../data/experience";
 import TimePeriod from "./visual/TimePeriod";
 import { Time } from "../data/types";
+import FloatTag from "./visual/FloatTag";
 
 interface ExperienceProps {
   company: string;
@@ -22,7 +23,9 @@ const Experience = ({
 }: ExperienceProps) => (
   <Card className={styles.experience} component="li">
     <span className={styles.title}>{title}</span>
-    <TimePeriod className={styles.period} start={start} end={end} />
+    <FloatTag>
+      <TimePeriod start={start} end={end} />
+    </FloatTag>
     <div className={styles.company}>
       <span className={styles.companyName}>{company}</span>
       <span className={styles.location}>{location}</span>

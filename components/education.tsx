@@ -1,5 +1,6 @@
 import styles from "../styles/Education.module.css";
 import Card from "./visual/Card";
+import FloatTag from "./visual/FloatTag";
 import TimePeriod from "./visual/TimePeriod";
 
 const Education = () => (
@@ -10,17 +11,19 @@ const Education = () => (
         <i>School of Engineering</i>
         <i>formerly Polytechnic Institute of NYU</i>
       </div>
-      <TimePeriod
-        className={styles.period}
-        start={{
-          month: "September",
-          year: 2010,
-        }}
-        end={{
-          month: "May",
-          year: 2014,
-        }}
-      />
+      <FloatTag>
+        <TimePeriod
+          className={styles.period}
+          start={{
+            month: "September",
+            year: 2010,
+          }}
+          end={{
+            month: "May",
+            year: 2014,
+          }}
+        />
+      </FloatTag>
       <p className={styles.title}>Bachelor of Science, Computer Science</p>
       <h4>Honors</h4>
       <ul>
