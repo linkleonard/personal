@@ -1,15 +1,16 @@
+@use "../styles/layout.module.scss" as l;
+
 .history {
   display: flex;
   flex-flow: column;
-  gap: 2rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  gap: l.$primary-spacing;
+  margin-left: l.$primary-spacing;
+  margin-right: l.$primary-spacing;
 }
 
 .experience {
   display: flex;
   flex-flow: row wrap;
-  gap: 0.5rem;
   align-items: baseline;
   position: relative;
   justify-content: space-between;
@@ -18,13 +19,15 @@
 .title {
   flex: 0 1 auto;
   font-weight: bold;
+  line-height: l.$primary-title-line-height;
 }
 
 .company {
   display: flex;
   flex: 0 1 100%;
   margin: 0;
-  gap: 0.5rem;
+  gap: l.$primary-text-separator-gap;
+  line-height: l.$primary-subtitle-line-height;
 
   font-style: italic;
 }
@@ -34,15 +37,17 @@
 
   &::before {
     content: "\2014";
-    margin-right: 0.5rem;
+    margin-right: l.$primary-text-separator-gap;
   }
 }
 
 .responsibilities {
+  margin-top: l.$body-text-item-gap;
   flex: 1 0 100%;
 }
 
 .responsibility {
-  margin-left: 1.5rem;
+  margin-left: l.$list-indent;
   list-style-type: circle;
+  line-height: l.$body-text-line-height;
 }
