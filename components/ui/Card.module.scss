@@ -1,12 +1,12 @@
 @use "../../styles/colors.module" as c;
+@use "../../styles/layout.module.scss" as l;
 
 .card {
-  box-shadow: c.$light-card-outline -1px -1px,
-    c.$light-card-outline-shadow 1px 1px;
+  box-shadow: c.$light-card-outline -#{l.$shadow-spacing} -#{l.$shadow-spacing},
+    c.$light-card-outline-shadow l.$shadow-spacing l.$shadow-spacing;
   padding: 1rem;
   background-color: c.$light-card-background;
   transition: all 0.5s;
-  border-radius: 0.5rem;
 
   @media (prefers-color-scheme: dark) {
     border: 2px solid c.$dark-card-outline;

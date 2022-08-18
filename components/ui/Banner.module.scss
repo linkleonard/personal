@@ -1,15 +1,17 @@
 @use "../../styles/colors.module" as c;
+@use "../../styles/layout.module" as l;
 
 .banner {
   background: c.$light-primary-background-color;
   display: inline-block;
   position: relative;
   padding: 1rem 2rem 1rem 1rem;
-  box-shadow: c.$light-primary-background-shadow-color 1rem 0;
-  border-radius: 0 2rem 2rem 0;
+  box-shadow: c.$light-primary-background-shadow-color l.$shadow-spacing
+    l.$shadow-spacing;
 
   @media (prefers-color-scheme: dark) {
     background: c.$dark-primary-background-color;
-    box-shadow: c.$dark-primary-background-shadow-color 1rem 0;
+    box-shadow: c.$dark-primary-background-shadow-color l.$shadow-spacing
+      l.$shadow-spacing;
   }
 }

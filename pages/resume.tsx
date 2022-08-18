@@ -19,7 +19,7 @@ const Resume = () => (
     <main className={styles.main}>
       <h1 className={styles.title}>Resume</h1>
       <section>
-        <Banner component="h2">Professional Experience</Banner>
+        <Banner component="h2">Experience</Banner>
         <WorkHistory />
       </section>
       <section>
