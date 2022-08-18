@@ -1,7 +1,7 @@
 import { MouseEventHandler, ReactNode } from "react";
 import { Language } from "../data/types";
 import Card from "./visual/Card";
-import styles from "../styles/ProficiencyFilter.module.css";
+import styles from "../styles/ProficiencyFilter.module.scss";
 
 interface FilterToggleProps {
   onClick: MouseEventHandler<HTMLInputElement>;

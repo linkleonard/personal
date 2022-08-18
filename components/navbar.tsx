@@ -1,6 +1,6 @@
 import Link from "next/link";
 import global from "../styles/Global.module.scss";
-import styles from "../styles/Nav.module.css";
+import styles from "../styles/Nav.module.scss";
 
 const NavBar = () => (
   <nav className={styles.nav}>

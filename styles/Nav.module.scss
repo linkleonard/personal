@@ -1,0 +1,22 @@
+.nav {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  @media (min-width: 350px) {
+    align-items: baseline;
+  }
+
+  ul {
+    flex: 1 1 auto;
+    flex-flow: row wrap;
+    display: flex;
+    vertical-align: text-bottom;
+    gap: 0.5rem;
+  }
+}
+
+.name {
+  flex: 0 0 auto;
+  margin: 1rem;
+}
