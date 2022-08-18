@@ -1,0 +1,23 @@
+@use "./colors.module" as c;
+
+.card {
+  box-shadow: c.$light-card-outline -1px -1px,
+    c.$light-card-outline-shadow 1px 1px;
+  padding: 1rem;
+  background-color: c.$light-card-background;
+  transition: all 0.5s;
+  border-radius: 0.5rem;
+
+  @media (prefers-color-scheme: dark) {
+    border: 2px solid c.$dark-card-outline;
+    background-color: c.$dark-card-background;
+  }
+
+  &:hover {
+    background-color: c.$light-card-hover-background;
+
+    @media (prefers-color-scheme: dark) {
+      background-color: c.$dark-card-hover-background;
+    }
+  }
+}

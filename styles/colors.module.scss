@@ -6,9 +6,19 @@ $light-secondary-text-color: black;
 $light-secondary-background-color: #f6f6ff;
 $light-secondary-border-color: white;
 
+$light-card-outline: rgba(255, 255, 255, 0.8);
+$light-card-outline-shadow: rgba(255, 255, 255);
+$light-card-background: rgba(255, 255, 255, 0.4);
+$light-card-hover-background: rgba(255, 255, 255, 0.6);
+
 $dark-primary-background-color: rgb(30, 30, 30);
 $dark-primary-background-shadow-color: rgba(60, 60, 60, 0.8);
 
 $dark-secondary-text-color: #fafafa;
 $dark-secondary-background-color: #030303;
 $dark-secondary-border-color: #6c6c6c;
+
+$dark-card-outline: #333;
+$dark-card-outline-shadow: rgba(255, 255, 255);
+$dark-card-background: rgba(30, 30, 30, 0.4);
+$dark-card-hover-background: rgba(30, 30, 30, 0.8);
