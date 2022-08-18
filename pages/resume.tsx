@@ -5,7 +5,7 @@ import Footer from "../components/footer";
 import NavBar from "../components/navbar";
 import ProficiencyList from "../components/proficiencylist";
 import WorkHistory from "../components/workhistory";
-import styles from "../styles/Resume.module.css";
+import styles from "../styles/Resume.module.scss";
 
 const Resume = () => (
   <div className={styles.container}>

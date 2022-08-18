@@ -31,10 +31,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-}
 
-@media (prefers-color-scheme: dark) {
-  .main {
+  @media (prefers-color-scheme: dark) {
     /* https://search-production.openverse.engineering/image/f3aab140-e652-46f1-8d56-0b94ab2dc9b8 */
     background-image: linear-gradient(
         to right,
@@ -45,18 +43,18 @@
       url("../assets/black-marble.jpg");
     background-size: contain;
   }
+
+  section {
+    position: relative;
+    margin-top: 6rem;
+
+    h2 {
+      position: absolute;
+      top: -5rem;
+    }
+  }
 }
 
 .title {
   align-self: center;
-}
-
-.main section {
-  position: relative;
-  margin-top: 6rem;
-}
-
-.main section h2 {
-  position: absolute;
-  top: -5rem;
 }
